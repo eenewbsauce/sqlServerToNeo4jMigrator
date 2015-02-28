@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1356E9AD-0395-462D-BBA3-C2654578DE43}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_1aMigrator</RootNamespace>
+    <AssemblyName>1aMigrator</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Neo4jClient">
+      <HintPath>..\packages\Neo4jClient.1.0.0.662\lib\net40\Neo4jClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1a.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>1a.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="1a.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="1a.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>1a.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="AlcoholByVolume.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BarMenuBeverageInstance.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BasicUser.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BasicUserLabel.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Beverage.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BeverageAward.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BeverageBrand.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BeverageProducer.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BeverageSubType.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BeverageSubTypeXRef.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BeverageType.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BeverageVarietalXRef.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BlogPost.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessBeverageCategory.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessBeverageFoodPairing.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessBeverageMenu.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessDrinkSpecial.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessFoodItem.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessFoodItemCategory.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessFoodSpecial.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessHour.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessUser.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessUserBeverageXRef.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessUserRestaurantCategoryXRef.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="City.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Follow.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FoodMenu.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IsUseraBusiness_Result.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LearnArticle.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LearnCategory.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Message.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProducerBeverageCategory.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProducerUser.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileCoverPhoto.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileTheme.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reservation.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RestaurantCategory.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="State.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatsBarMenuView.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatsBlogPostView.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatsFoodMenuView.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatsProductListView.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatsProfileView.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatsStoryView.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TempBusinessRegistrationInfo.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TempProducerRegistrationClaimedBeverage.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TempProducerRegistrationInfo.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserBeverageXRef.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserBusinessXRef.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserEvent.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserFoodItemXRef.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserIsAttendingEvent.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserPhoto.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserPhotoAlbum.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserProducerXRef.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserVideo.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Varietal.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViticultureRegion.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WebCrawler.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="webpages_Membership.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="webpages_OAuthMembership.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+    <Compile Include="webpages_Roles.cs">
+      <DependentUpon>1a.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="1a.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>1a.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="1a.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>1a.edmx</DependentUpon>
+      <LastGenOutput>1a.Context.cs</LastGenOutput>
+    </None>
+    <None Include="1a.edmx.diagram">
+      <DependentUpon>1a.edmx</DependentUpon>
+    </None>
+    <None Include="1a.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>1a.edmx</DependentUpon>
+      <LastGenOutput>1a.cs</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

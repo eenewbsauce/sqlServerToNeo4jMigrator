@@ -1,0 +1,2044 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PourtraitBetaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="PourtraitBetaModelStoreContainer">
+    <EntitySet Name="AlcoholByVolume" EntityType="PourtraitBetaModel.Store.AlcoholByVolume" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BarMenuBeverageInstance" EntityType="PourtraitBetaModel.Store.BarMenuBeverageInstance" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BasicUser" EntityType="PourtraitBetaModel.Store.BasicUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BasicUserLabel" EntityType="PourtraitBetaModel.Store.BasicUserLabel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Beverage" EntityType="PourtraitBetaModel.Store.Beverage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BeverageAward" EntityType="PourtraitBetaModel.Store.BeverageAward" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BeverageBrand" EntityType="PourtraitBetaModel.Store.BeverageBrand" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BeverageProducer" EntityType="PourtraitBetaModel.Store.BeverageProducer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BeverageSubType" EntityType="PourtraitBetaModel.Store.BeverageSubType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BeverageSubTypeXRef" EntityType="PourtraitBetaModel.Store.BeverageSubTypeXRef" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BeverageType" EntityType="PourtraitBetaModel.Store.BeverageType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BeverageVarietalXRef" EntityType="PourtraitBetaModel.Store.BeverageVarietalXRef" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BlogPost" EntityType="PourtraitBetaModel.Store.BlogPost" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BusinessBeverageCategory" EntityType="PourtraitBetaModel.Store.BusinessBeverageCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BusinessBeverageFoodPairing" EntityType="PourtraitBetaModel.Store.BusinessBeverageFoodPairing" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BusinessBeverageMenu" EntityType="PourtraitBetaModel.Store.BusinessBeverageMenu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BusinessDrinkSpecial" EntityType="PourtraitBetaModel.Store.BusinessDrinkSpecial" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BusinessFoodItem" EntityType="PourtraitBetaModel.Store.BusinessFoodItem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BusinessFoodItemCategory" EntityType="PourtraitBetaModel.Store.BusinessFoodItemCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BusinessFoodSpecial" EntityType="PourtraitBetaModel.Store.BusinessFoodSpecial" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BusinessHour" EntityType="PourtraitBetaModel.Store.BusinessHour" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BusinessUser" EntityType="PourtraitBetaModel.Store.BusinessUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BusinessUserBeverageXRef" EntityType="PourtraitBetaModel.Store.BusinessUserBeverageXRef" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BusinessUserRestaurantCategoryXRef" EntityType="PourtraitBetaModel.Store.BusinessUserRestaurantCategoryXRef" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="City" EntityType="PourtraitBetaModel.Store.City" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Country" EntityType="PourtraitBetaModel.Store.Country" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Feedback" EntityType="PourtraitBetaModel.Store.Feedback" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Follow" EntityType="PourtraitBetaModel.Store.Follow" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FoodMenu" EntityType="PourtraitBetaModel.Store.FoodMenu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LearnArticle" EntityType="PourtraitBetaModel.Store.LearnArticle" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LearnCategory" EntityType="PourtraitBetaModel.Store.LearnCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Message" EntityType="PourtraitBetaModel.Store.Message" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProducerBeverageCategory" EntityType="PourtraitBetaModel.Store.ProducerBeverageCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProducerUser" EntityType="PourtraitBetaModel.Store.ProducerUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProfileCoverPhoto" EntityType="PourtraitBetaModel.Store.ProfileCoverPhoto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProfileTheme" EntityType="PourtraitBetaModel.Store.ProfileTheme" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Reservation" EntityType="PourtraitBetaModel.Store.Reservation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RestaurantCategory" EntityType="PourtraitBetaModel.Store.RestaurantCategory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="State" EntityType="PourtraitBetaModel.Store.State" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StatsBarMenuViews" EntityType="PourtraitBetaModel.Store.StatsBarMenuViews" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StatsBlogPostViews" EntityType="PourtraitBetaModel.Store.StatsBlogPostViews" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StatsFoodMenuViews" EntityType="PourtraitBetaModel.Store.StatsFoodMenuViews" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StatsProductListViews" EntityType="PourtraitBetaModel.Store.StatsProductListViews" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StatsProfileViews" EntityType="PourtraitBetaModel.Store.StatsProfileViews" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StatsStoryViews" EntityType="PourtraitBetaModel.Store.StatsStoryViews" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TempBusinessRegistrationInfo" EntityType="PourtraitBetaModel.Store.TempBusinessRegistrationInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TempProducerRegistrationClaimedBeverage" EntityType="PourtraitBetaModel.Store.TempProducerRegistrationClaimedBeverage" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TempProducerRegistrationInfo" EntityType="PourtraitBetaModel.Store.TempProducerRegistrationInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserBeverageXRef" EntityType="PourtraitBetaModel.Store.UserBeverageXRef" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserBusinessXRef" EntityType="PourtraitBetaModel.Store.UserBusinessXRef" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserEvent" EntityType="PourtraitBetaModel.Store.UserEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserFoodItemXRef" EntityType="PourtraitBetaModel.Store.UserFoodItemXRef" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserIsAttendingEvent" EntityType="PourtraitBetaModel.Store.UserIsAttendingEvent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserPhoto" EntityType="PourtraitBetaModel.Store.UserPhoto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserPhotoAlbum" EntityType="PourtraitBetaModel.Store.UserPhotoAlbum" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserProducerXRef" EntityType="PourtraitBetaModel.Store.UserProducerXRef" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserProfile" EntityType="PourtraitBetaModel.Store.UserProfile" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserVideo" EntityType="PourtraitBetaModel.Store.UserVideo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Varietal" EntityType="PourtraitBetaModel.Store.Varietal" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ViticultureRegion" EntityType="PourtraitBetaModel.Store.ViticultureRegion" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WebCrawler" EntityType="PourtraitBetaModel.Store.WebCrawler" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_Membership" EntityType="PourtraitBetaModel.Store.webpages_Membership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="PourtraitBetaModel.Store.webpages_OAuthMembership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_Roles" EntityType="PourtraitBetaModel.Store.webpages_Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="webpages_UsersInRoles" EntityType="PourtraitBetaModel.Store.webpages_UsersInRoles" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_BarMenuBeverageInstance_BusinessBeverageCategory" Association="PourtraitBetaModel.Store.FK_BarMenuBeverageInstance_BusinessBeverageCategory">
+      <End Role="BusinessBeverageCategory" EntitySet="BusinessBeverageCategory" />
+      <End Role="BarMenuBeverageInstance" EntitySet="BarMenuBeverageInstance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BasicUser_BasicUserLabel" Association="PourtraitBetaModel.Store.FK_BasicUser_BasicUserLabel">
+      <End Role="BasicUserLabel" EntitySet="BasicUserLabel" />
+      <End Role="BasicUser" EntitySet="BasicUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Beverage_AlcByVolume" Association="PourtraitBetaModel.Store.FK_Beverage_AlcByVolume">
+      <End Role="AlcoholByVolume" EntitySet="AlcoholByVolume" />
+      <End Role="Beverage" EntitySet="Beverage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Beverage_BeverageBrand" Association="PourtraitBetaModel.Store.FK_Beverage_BeverageBrand">
+      <End Role="BeverageBrand" EntitySet="BeverageBrand" />
+      <End Role="Beverage" EntitySet="Beverage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Beverage_BeverageProducer" Association="PourtraitBetaModel.Store.FK_Beverage_BeverageProducer">
+      <End Role="BeverageProducer" EntitySet="BeverageProducer" />
+      <End Role="Beverage" EntitySet="Beverage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Beverage_BeverageType" Association="PourtraitBetaModel.Store.FK_Beverage_BeverageType">
+      <End Role="BeverageType" EntitySet="BeverageType" />
+      <End Role="Beverage" EntitySet="Beverage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Beverage_City" Association="PourtraitBetaModel.Store.FK_Beverage_City">
+      <End Role="City" EntitySet="City" />
+      <End Role="Beverage" EntitySet="Beverage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Beverage_ProducerBeverageCategory" Association="PourtraitBetaModel.Store.FK_Beverage_ProducerBeverageCategory">
+      <End Role="ProducerBeverageCategory" EntitySet="ProducerBeverageCategory" />
+      <End Role="Beverage" EntitySet="Beverage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Beverage_State" Association="PourtraitBetaModel.Store.FK_Beverage_State">
+      <End Role="State" EntitySet="State" />
+      <End Role="Beverage" EntitySet="Beverage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Beverage_ViticultureRegion" Association="PourtraitBetaModel.Store.FK_Beverage_ViticultureRegion">
+      <End Role="ViticultureRegion" EntitySet="ViticultureRegion" />
+      <End Role="Beverage" EntitySet="Beverage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BeverageAward_Beverage" Association="PourtraitBetaModel.Store.FK_BeverageAward_Beverage">
+      <End Role="Beverage" EntitySet="Beverage" />
+      <End Role="BeverageAward" EntitySet="BeverageAward" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BeverageBrand_CrawledProducer" Association="PourtraitBetaModel.Store.FK_BeverageBrand_CrawledProducer">
+      <End Role="BeverageProducer" EntitySet="BeverageProducer" />
+      <End Role="BeverageBrand" EntitySet="BeverageBrand" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BeverageSubType_BeverageType" Association="PourtraitBetaModel.Store.FK_BeverageSubType_BeverageType">
+      <End Role="BeverageType" EntitySet="BeverageType" />
+      <End Role="BeverageSubType" EntitySet="BeverageSubType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BeverageSubTypeXRef_Beverage" Association="PourtraitBetaModel.Store.FK_BeverageSubTypeXRef_Beverage">
+      <End Role="Beverage" EntitySet="Beverage" />
+      <End Role="BeverageSubTypeXRef" EntitySet="BeverageSubTypeXRef" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BeverageSubTypeXRef_BeverageSubType" Association="PourtraitBetaModel.Store.FK_BeverageSubTypeXRef_BeverageSubType">
+      <End Role="BeverageSubType" EntitySet="BeverageSubType" />
+      <End Role="BeverageSubTypeXRef" EntitySet="BeverageSubTypeXRef" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BeverageVarietal_Beverage" Association="PourtraitBetaModel.Store.FK_BeverageVarietal_Beverage">
+      <End Role="Beverage" EntitySet="Beverage" />
+      <End Role="BeverageVarietalXRef" EntitySet="BeverageVarietalXRef" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BeverageVarietalXRef_Varietal" Association="PourtraitBetaModel.Store.FK_BeverageVarietalXRef_Varietal">
+      <End Role="Varietal" EntitySet="Varietal" />
+      <End Role="BeverageVarietalXRef" EntitySet="BeverageVarietalXRef" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BlogPost_UserProfile" Association="PourtraitBetaModel.Store.FK_BlogPost_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="BlogPost" EntitySet="BlogPost" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessBeverageCategory_BusinessBeverageMenu" Association="PourtraitBetaModel.Store.FK_BusinessBeverageCategory_BusinessBeverageMenu">
+      <End Role="BusinessBeverageMenu" EntitySet="BusinessBeverageMenu" />
+      <End Role="BusinessBeverageCategory" EntitySet="BusinessBeverageCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessBeverageFoodPairing_BusinessFoodItem" Association="PourtraitBetaModel.Store.FK_BusinessBeverageFoodPairing_BusinessFoodItem">
+      <End Role="BusinessFoodItem" EntitySet="BusinessFoodItem" />
+      <End Role="BusinessBeverageFoodPairing" EntitySet="BusinessBeverageFoodPairing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessBeverageFoodPairing_BusinessUserBeverageXRef" Association="PourtraitBetaModel.Store.FK_BusinessBeverageFoodPairing_BusinessUserBeverageXRef">
+      <End Role="BusinessUserBeverageXRef" EntitySet="BusinessUserBeverageXRef" />
+      <End Role="BusinessBeverageFoodPairing" EntitySet="BusinessBeverageFoodPairing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessBeverageMenuId_BusinessUser" Association="PourtraitBetaModel.Store.FK_BusinessBeverageMenuId_BusinessUser">
+      <End Role="BusinessUser" EntitySet="BusinessUser" />
+      <End Role="BusinessBeverageMenu" EntitySet="BusinessBeverageMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessDrinkSpecial_BusinessUserBeverageXRef" Association="PourtraitBetaModel.Store.FK_BusinessDrinkSpecial_BusinessUserBeverageXRef">
+      <End Role="BarMenuBeverageInstance" EntitySet="BarMenuBeverageInstance" />
+      <End Role="BusinessDrinkSpecial" EntitySet="BusinessDrinkSpecial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessFoodItemCategory_FoodMenu" Association="PourtraitBetaModel.Store.FK_BusinessFoodItemCategory_FoodMenu">
+      <End Role="FoodMenu" EntitySet="FoodMenu" />
+      <End Role="BusinessFoodItemCategory" EntitySet="BusinessFoodItemCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessFoodSpecial_BusinessFoodItem" Association="PourtraitBetaModel.Store.FK_BusinessFoodSpecial_BusinessFoodItem">
+      <End Role="BusinessFoodItem" EntitySet="BusinessFoodItem" />
+      <End Role="BusinessFoodSpecial" EntitySet="BusinessFoodSpecial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessHour_UserProfile" Association="PourtraitBetaModel.Store.FK_BusinessHour_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="BusinessHour" EntitySet="BusinessHour" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessUserBeveragePrice_BusinessUserBeverageXRef" Association="PourtraitBetaModel.Store.FK_BusinessUserBeveragePrice_BusinessUserBeverageXRef">
+      <End Role="BusinessUserBeverageXRef" EntitySet="BusinessUserBeverageXRef" />
+      <End Role="BarMenuBeverageInstance" EntitySet="BarMenuBeverageInstance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessUserBeverageXRef_BusinessUser" Association="PourtraitBetaModel.Store.FK_BusinessUserBeverageXRef_BusinessUser">
+      <End Role="BusinessUser" EntitySet="BusinessUser" />
+      <End Role="BusinessUserBeverageXRef" EntitySet="BusinessUserBeverageXRef" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessUserRestaurantCategoryXRef_BusinessUser" Association="PourtraitBetaModel.Store.FK_BusinessUserRestaurantCategoryXRef_BusinessUser">
+      <End Role="BusinessUser" EntitySet="BusinessUser" />
+      <End Role="BusinessUserRestaurantCategoryXRef" EntitySet="BusinessUserRestaurantCategoryXRef" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessUserRestaurantCategoryXRef_RestaurantCategory" Association="PourtraitBetaModel.Store.FK_BusinessUserRestaurantCategoryXRef_RestaurantCategory">
+      <End Role="RestaurantCategory" EntitySet="RestaurantCategory" />
+      <End Role="BusinessUserRestaurantCategoryXRef" EntitySet="BusinessUserRestaurantCategoryXRef" />
+    </AssociationSet>
+    <AssociationSet Name="FK_City_Country" Association="PourtraitBetaModel.Store.FK_City_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK_City_State" Association="PourtraitBetaModel.Store.FK_City_State">
+      <End Role="State" EntitySet="State" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Event_UserProfile" Association="PourtraitBetaModel.Store.FK_Event_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="UserEvent" EntitySet="UserEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Followee_UserProfile" Association="PourtraitBetaModel.Store.FK_Followee_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="Follow" EntitySet="Follow" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Follower_UserProfile" Association="PourtraitBetaModel.Store.FK_Follower_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="Follow" EntitySet="Follow" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FoodMenu_BusinessUser" Association="PourtraitBetaModel.Store.FK_FoodMenu_BusinessUser">
+      <End Role="BusinessUser" EntitySet="BusinessUser" />
+      <End Role="FoodMenu" EntitySet="FoodMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LearnArticle_LearnCategory" Association="PourtraitBetaModel.Store.FK_LearnArticle_LearnCategory">
+      <End Role="LearnCategory" EntitySet="LearnCategory" />
+      <End Role="LearnArticle" EntitySet="LearnArticle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Message_FromUserProfile" Association="PourtraitBetaModel.Store.FK_Message_FromUserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="Message" EntitySet="Message" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Message_ToUserProfile" Association="PourtraitBetaModel.Store.FK_Message_ToUserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="Message" EntitySet="Message" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProducerBeverageCategory_ProducerUser" Association="PourtraitBetaModel.Store.FK_ProducerBeverageCategory_ProducerUser">
+      <End Role="BeverageProducer" EntitySet="BeverageProducer" />
+      <End Role="ProducerBeverageCategory" EntitySet="ProducerBeverageCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProducerUser_ViticultureRegion" Association="PourtraitBetaModel.Store.FK_ProducerUser_ViticultureRegion">
+      <End Role="ViticultureRegion" EntitySet="ViticultureRegion" />
+      <End Role="ProducerUser" EntitySet="ProducerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProfileTheme_UserProfile" Association="PourtraitBetaModel.Store.FK_ProfileTheme_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="ProfileTheme" EntitySet="ProfileTheme" />
+    </AssociationSet>
+    <AssociationSet Name="fk_RoleId" Association="PourtraitBetaModel.Store.fk_RoleId">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_State_Country" Association="PourtraitBetaModel.Store.FK_State_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="State" EntitySet="State" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StatsBarMenuViews_BusinessUser" Association="PourtraitBetaModel.Store.FK_StatsBarMenuViews_BusinessUser">
+      <End Role="BusinessUser" EntitySet="BusinessUser" />
+      <End Role="StatsBarMenuViews" EntitySet="StatsBarMenuViews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StatsBlogPostViews_BlogPost" Association="PourtraitBetaModel.Store.FK_StatsBlogPostViews_BlogPost">
+      <End Role="BlogPost" EntitySet="BlogPost" />
+      <End Role="StatsBlogPostViews" EntitySet="StatsBlogPostViews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StatsFoodMenuViews_BusinessUser" Association="PourtraitBetaModel.Store.FK_StatsFoodMenuViews_BusinessUser">
+      <End Role="BusinessUser" EntitySet="BusinessUser" />
+      <End Role="StatsFoodMenuViews" EntitySet="StatsFoodMenuViews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StatsProductListViews_ProducerUser" Association="PourtraitBetaModel.Store.FK_StatsProductListViews_ProducerUser">
+      <End Role="ProducerUser" EntitySet="ProducerUser" />
+      <End Role="StatsProductListViews" EntitySet="StatsProductListViews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StatsProfileViews_UserProfile" Association="PourtraitBetaModel.Store.FK_StatsProfileViews_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="StatsProfileViews" EntitySet="StatsProfileViews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StatsStoryViews_ProducerUser" Association="PourtraitBetaModel.Store.FK_StatsStoryViews_ProducerUser">
+      <End Role="ProducerUser" EntitySet="ProducerUser" />
+      <End Role="StatsStoryViews" EntitySet="StatsStoryViews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TempProducerRegistrationClaimedBeverage_TempProducerRegistrationInfo" Association="PourtraitBetaModel.Store.FK_TempProducerRegistrationClaimedBeverage_TempProducerRegistrationInfo">
+      <End Role="TempProducerRegistrationInfo" EntitySet="TempProducerRegistrationInfo" />
+      <End Role="TempProducerRegistrationClaimedBeverage" EntitySet="TempProducerRegistrationClaimedBeverage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserBeverageXRef_Beverage" Association="PourtraitBetaModel.Store.FK_UserBeverageXRef_Beverage">
+      <End Role="Beverage" EntitySet="Beverage" />
+      <End Role="UserBeverageXRef" EntitySet="UserBeverageXRef" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserBeverageXRef_UserProfile" Association="PourtraitBetaModel.Store.FK_UserBeverageXRef_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="UserBeverageXRef" EntitySet="UserBeverageXRef" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserBusinessXRef_BusinessUser" Association="PourtraitBetaModel.Store.FK_UserBusinessXRef_BusinessUser">
+      <End Role="BusinessUser" EntitySet="BusinessUser" />
+      <End Role="UserBusinessXRef" EntitySet="UserBusinessXRef" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserBusinessXRef_UserProfile" Association="PourtraitBetaModel.Store.FK_UserBusinessXRef_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="UserBusinessXRef" EntitySet="UserBusinessXRef" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserFoodItemXRef_BusinessFoodItem" Association="PourtraitBetaModel.Store.FK_UserFoodItemXRef_BusinessFoodItem">
+      <End Role="BusinessFoodItem" EntitySet="BusinessFoodItem" />
+      <End Role="UserFoodItemXRef" EntitySet="UserFoodItemXRef" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserFoodItemXRef_UserProfile" Association="PourtraitBetaModel.Store.FK_UserFoodItemXRef_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="UserFoodItemXRef" EntitySet="UserFoodItemXRef" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserId" Association="PourtraitBetaModel.Store.fk_UserId">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserIsAttendingEvent_UserEvent" Association="PourtraitBetaModel.Store.FK_UserIsAttendingEvent_UserEvent">
+      <End Role="UserEvent" EntitySet="UserEvent" />
+      <End Role="UserIsAttendingEvent" EntitySet="UserIsAttendingEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserIsAttendingEvent_UserProfile" Association="PourtraitBetaModel.Store.FK_UserIsAttendingEvent_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="UserIsAttendingEvent" EntitySet="UserIsAttendingEvent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserPhoto_UserPhotoAlbum" Association="PourtraitBetaModel.Store.FK_UserPhoto_UserPhotoAlbum">
+      <End Role="UserPhotoAlbum" EntitySet="UserPhotoAlbum" />
+      <End Role="UserPhoto" EntitySet="UserPhoto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserPhotoAlbum_UserProfile" Association="PourtraitBetaModel.Store.FK_UserPhotoAlbum_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="UserPhotoAlbum" EntitySet="UserPhotoAlbum" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProducerXRefId_ProducerUser" Association="PourtraitBetaModel.Store.FK_UserProducerXRefId_ProducerUser">
+      <End Role="ProducerUser" EntitySet="ProducerUser" />
+      <End Role="UserProducerXRef" EntitySet="UserProducerXRef" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProducerXRefId_UserProfile" Association="PourtraitBetaModel.Store.FK_UserProducerXRefId_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="UserProducerXRef" EntitySet="UserProducerXRef" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfile_City" Association="PourtraitBetaModel.Store.FK_UserProfile_City">
+      <End Role="City" EntitySet="City" />
+      <End Role="UserProfile" EntitySet="UserProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfile_Country" Association="PourtraitBetaModel.Store.FK_UserProfile_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="UserProfile" EntitySet="UserProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfile_ProfileCoverPhoto" Association="PourtraitBetaModel.Store.FK_UserProfile_ProfileCoverPhoto">
+      <End Role="ProfileCoverPhoto" EntitySet="ProfileCoverPhoto" />
+      <End Role="UserProfile" EntitySet="UserProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfile_ProfileTheme" Association="PourtraitBetaModel.Store.FK_UserProfile_ProfileTheme">
+      <End Role="ProfileTheme" EntitySet="ProfileTheme" />
+      <End Role="UserProfile" EntitySet="UserProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfile_State" Association="PourtraitBetaModel.Store.FK_UserProfile_State">
+      <End Role="State" EntitySet="State" />
+      <End Role="UserProfile" EntitySet="UserProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfile_UserProfile" Association="PourtraitBetaModel.Store.FK_UserProfile_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="UserProfile1" EntitySet="UserProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfile_webpages_Membership" Association="PourtraitBetaModel.Store.FK_UserProfile_webpages_Membership">
+      <End Role="webpages_Membership" EntitySet="webpages_Membership" />
+      <End Role="UserProfile" EntitySet="UserProfile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserVideo_UserProfile" Association="PourtraitBetaModel.Store.FK_UserVideo_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="UserVideo" EntitySet="UserVideo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ViticultureRegion_Country" Association="PourtraitBetaModel.Store.FK_ViticultureRegion_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="ViticultureRegion" EntitySet="ViticultureRegion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ViticultureRegion_ViticultureRegion" Association="PourtraitBetaModel.Store.FK_ViticultureRegion_ViticultureRegion">
+      <End Role="ViticultureRegion" EntitySet="ViticultureRegion" />
+      <End Role="ViticultureRegion1" EntitySet="ViticultureRegion" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AlcoholByVolume">
+    <Key>
+      <PropertyRef Name="AlcoholByVolumeId" />
+    </Key>
+    <Property Name="AlcoholByVolumeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AlcoholByVolume" Type="decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="BarMenuBeverageInstance">
+    <Key>
+      <PropertyRef Name="BarMenuBeverageInstanceId" />
+    </Key>
+    <Property Name="BarMenuBeverageInstanceId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BusinessUserBeverageXRefId" Type="int" Nullable="false" />
+    <Property Name="BusinessBeverageCategoryId" Type="int" Nullable="false" />
+    <Property Name="Format" Type="nvarchar" MaxLength="100" />
+    <Property Name="Price" Type="decimal" Scale="2" />
+    <Property Name="SortOrder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BasicUser">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="IsLegalAge" Type="bit" Nullable="false" />
+    <Property Name="BasicUserLabelId" Type="int" />
+    <Property Name="DateOfBirth" Type="date" />
+    <Property Name="SefUrl" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="BasicUserLabel">
+    <Key>
+      <PropertyRef Name="BasicUserLabelId" />
+    </Key>
+    <Property Name="BasicUserLabelId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Beverage">
+    <Key>
+      <PropertyRef Name="BeverageId" />
+    </Key>
+    <Property Name="BeverageId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BeverageTypeId" Type="int" />
+    <Property Name="BeverageBrandId" Type="int" />
+    <Property Name="BeverageProducerId" Type="int" />
+    <Property Name="AlcoholByVolumeId" Type="int" />
+    <Property Name="ProducerBeverageCategoryId" Type="int" />
+    <Property Name="ViticultureRegionId" Type="int" />
+    <Property Name="CityId" Type="int" />
+    <Property Name="StateId" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="CrawledName" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="ImageUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="CrawledLocation" Type="nvarchar" MaxLength="500" />
+    <Property Name="BeverageBackground" Type="text" />
+    <Property Name="ProducerNotes" Type="text" />
+    <Property Name="TastingNotes" Type="text" />
+    <Property Name="HarvestDate" Type="datetime" />
+    <Property Name="BottlingDate" Type="datetime" />
+    <Property Name="ReleaseDate" Type="datetime" />
+    <Property Name="PhValue" Type="decimal" Scale="2" />
+    <Property Name="TotalAcidValue" Type="decimal" Scale="2" />
+    <Property Name="Oak" Type="nvarchar" MaxLength="200" />
+    <Property Name="OakAge" Type="varchar" MaxLength="200" />
+    <Property Name="ProductionAmount" Type="varchar" MaxLength="200" />
+    <Property Name="FoodPairings" Type="text" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="SefUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="LargeImageUrl" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="BeverageAward">
+    <Key>
+      <PropertyRef Name="BeverageAwardId" />
+    </Key>
+    <Property Name="BeverageAwardId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BeverageId" Type="int" Nullable="false" />
+    <Property Name="ContestName" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="AwardName" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="AwardDescription" Type="text" />
+  </EntityType>
+  <EntityType Name="BeverageBrand">
+    <Key>
+      <PropertyRef Name="BeverageBrandId" />
+    </Key>
+    <Property Name="BeverageBrandId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CrawledProducerId" Type="int" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="BeverageProducer">
+    <Key>
+      <PropertyRef Name="BeverageProducerId" />
+    </Key>
+    <Property Name="BeverageProducerId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProducerUserId" Type="int" />
+    <Property Name="ProducerName" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="SefUrl" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="BeverageSubType">
+    <Key>
+      <PropertyRef Name="BeverageSubTypeId" />
+    </Key>
+    <Property Name="BeverageSubTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BeverageTypeId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="BeverageSubTypeXRef">
+    <Key>
+      <PropertyRef Name="BeverageSubTypeXRefId" />
+    </Key>
+    <Property Name="BeverageSubTypeXRefId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BeverageId" Type="int" Nullable="false" />
+    <Property Name="BeverageSubTypeId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BeverageType">
+    <Key>
+      <PropertyRef Name="BeverageTypeId" />
+    </Key>
+    <Property Name="BeverageTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="BeverageVarietalXRef">
+    <Key>
+      <PropertyRef Name="BeverageVarietalId" />
+    </Key>
+    <Property Name="BeverageVarietalId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BeverageId" Type="int" Nullable="false" />
+    <Property Name="VarietalId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BlogPost">
+    <Key>
+      <PropertyRef Name="BlogPostId" />
+    </Key>
+    <Property Name="BlogPostId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Intro" Type="text" Nullable="false" />
+    <Property Name="Body" Type="text" Nullable="false" />
+    <Property Name="ImageUrl" Type="varchar" MaxLength="200" />
+    <Property Name="IsFeatured" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BusinessBeverageCategory">
+    <Key>
+      <PropertyRef Name="BusinessBeverageCategoryId" />
+    </Key>
+    <Property Name="BusinessBeverageCategoryId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BusinessBeverageMenuId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="SortOrder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BusinessBeverageFoodPairing">
+    <Key>
+      <PropertyRef Name="BusinessBeverageFoodPairingId" />
+    </Key>
+    <Property Name="BusinessBeverageFoodPairingId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BusinessFoodItemId" Type="int" Nullable="false" />
+    <Property Name="BusinessUserBeverageXRefId" Type="int" Nullable="false" />
+    <Property Name="Comment" Type="text" />
+  </EntityType>
+  <EntityType Name="BusinessBeverageMenu">
+    <Key>
+      <PropertyRef Name="BusinessBeverageMenuId" />
+    </Key>
+    <Property Name="BusinessBeverageMenuId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="SortOrder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BusinessDrinkSpecial">
+    <Key>
+      <PropertyRef Name="BusinessDrinkSpecialId" />
+    </Key>
+    <Property Name="BusinessDrinkSpecialId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BarMenuBeverageInstanceId" Type="int" Nullable="false" />
+    <Property Name="DayOfWeek" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="StartTime" Type="time" Precision="0" />
+    <Property Name="EndTime" Type="time" Precision="0" />
+    <Property Name="Price" Type="decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="BusinessFoodItem">
+    <Key>
+      <PropertyRef Name="BusinessFoodItemId" />
+    </Key>
+    <Property Name="BusinessFoodItemId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="ImageUrl" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Description" Type="text" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="BusinessFoodItemCategoryId" Type="int" Nullable="false" />
+    <Property Name="Price" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="SortOrder" Type="int" Nullable="false" />
+    <Property Name="LargeImageUrl" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="BusinessFoodItemCategory">
+    <Key>
+      <PropertyRef Name="BusinessFoodItemCategoryId" />
+    </Key>
+    <Property Name="BusinessFoodItemCategoryId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FoodMenuId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="SortOrder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BusinessFoodSpecial">
+    <Key>
+      <PropertyRef Name="BusinessFoodSpecialId" />
+    </Key>
+    <Property Name="BusinessFoodSpecialId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BusinessFoodItemId" Type="int" Nullable="false" />
+    <Property Name="DayOfWeek" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="StartTime" Type="time" Precision="0" />
+    <Property Name="EndTime" Type="time" Precision="0" />
+    <Property Name="Price" Type="decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="BusinessHour">
+    <Key>
+      <PropertyRef Name="BusinessHourId" />
+    </Key>
+    <Property Name="BusinessHourId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="DayOfWeek" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="OpenTime" Type="time" Nullable="false" Precision="0" />
+    <Property Name="CloseTime" Type="time" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="BusinessUser">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="200" />
+    <Property Name="Philosophy" Type="text" />
+    <Property Name="Restaurateur" Type="nvarchar" MaxLength="200" />
+    <Property Name="Sommelier" Type="nvarchar" MaxLength="200" />
+    <Property Name="HeadChef" Type="nvarchar" MaxLength="200" />
+    <Property Name="Website" Type="nvarchar" MaxLength="1000" />
+    <Property Name="FacebookUrl" Type="nvarchar" MaxLength="1000" />
+    <Property Name="TwitterUrl" Type="nvarchar" MaxLength="1000" />
+    <Property Name="PhilosophyVideoLink" Type="nvarchar" MaxLength="1000" />
+    <Property Name="AboutVideoLink" Type="nvarchar" MaxLength="1000" />
+    <Property Name="MapEmbedCode" Type="nvarchar" MaxLength="3000" />
+    <Property Name="SefUrl" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="BusinessUserBeverageXRef">
+    <Key>
+      <PropertyRef Name="BusinessUserBeverageXRefId" />
+    </Key>
+    <Property Name="BusinessUserBeverageXRefId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BusinessUserId" Type="int" Nullable="false" />
+    <Property Name="BeverageId" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BusinessUserRestaurantCategoryXRef">
+    <Key>
+      <PropertyRef Name="BusinessUserRestaurantCategoryXRefId" />
+    </Key>
+    <Property Name="BusinessUserRestaurantCategoryXRefId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BusinessUserId" Type="int" Nullable="false" />
+    <Property Name="RestaurantCategoryId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="StateId" Type="int" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="LegalDrinkingAge" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Feedback">
+    <Key>
+      <PropertyRef Name="FeedbackId" />
+    </Key>
+    <Property Name="FeedbackId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PageUrl" Type="varchar" Nullable="false" MaxLength="300" />
+    <Property Name="Message" Type="text" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Follow">
+    <Key>
+      <PropertyRef Name="FollowId" />
+    </Key>
+    <Property Name="FollowId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FollowerId" Type="int" Nullable="false" />
+    <Property Name="FolloweeId" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FoodMenu">
+    <Key>
+      <PropertyRef Name="FoodMenuId" />
+    </Key>
+    <Property Name="FoodMenuId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SortOrder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LearnArticle">
+    <Key>
+      <PropertyRef Name="LearnArticleId" />
+    </Key>
+    <Property Name="LearnArticleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="LearnCategoryId" Type="int" Nullable="false" />
+    <Property Name="Intro" Type="text" Nullable="false" />
+    <Property Name="Body" Type="text" Nullable="false" />
+    <Property Name="IntroImageUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="MetaDescription" Type="text" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LearnCategory">
+    <Key>
+      <PropertyRef Name="LearnCategoryId" />
+    </Key>
+    <Property Name="LearnCategoryId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="ImageUrl" Type="varchar" MaxLength="500" />
+    <Property Name="Description" Type="text" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="MessageId" />
+    </Key>
+    <Property Name="MessageId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FromUserId" Type="int" Nullable="false" />
+    <Property Name="ToUserId" Type="int" Nullable="false" />
+    <Property Name="Subject" Type="text" />
+    <Property Name="Body" Type="text" />
+    <Property Name="DateSent" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProducerBeverageCategory">
+    <Key>
+      <PropertyRef Name="ProducerBeverageCategoryId" />
+    </Key>
+    <Property Name="ProducerBeverageCategoryId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BeverageProducerId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ProducerUser">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ViticultureRegionId" Type="int" />
+    <Property Name="HeadWinemaker" Type="nvarchar" MaxLength="200" />
+    <Property Name="Philosophy" Type="text" />
+    <Property Name="Website" Type="nvarchar" MaxLength="1000" />
+    <Property Name="FacebookUrl" Type="nvarchar" MaxLength="1000" />
+    <Property Name="TwitterUrl" Type="nvarchar" MaxLength="1000" />
+    <Property Name="BlogUrl" Type="nvarchar" MaxLength="1000" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="200" />
+    <Property Name="PhilosophyVideoLink" Type="nvarchar" MaxLength="1000" />
+    <Property Name="AboutVideoLink" Type="nvarchar" MaxLength="1000" />
+    <Property Name="MapEmbedCode" Type="nvarchar" MaxLength="3000" />
+    <Property Name="ProducerCategory" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ProfileCoverPhoto">
+    <Key>
+      <PropertyRef Name="ProfileCoverPhotoId" />
+    </Key>
+    <Property Name="ProfileCoverPhotoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Path" Type="varchar" Nullable="false" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="ProfileTheme">
+    <Key>
+      <PropertyRef Name="ProfileThemeId" />
+    </Key>
+    <Property Name="ProfileThemeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="ScreenshotPath" Type="varchar" Nullable="false" MaxLength="300" />
+    <Property Name="TileColour" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="BackgroundColour" Type="varchar" MaxLength="100" />
+    <Property Name="Texture" Type="varchar" MaxLength="100" />
+    <Property Name="OwnerId" Type="int" />
+    <Property Name="FooterFontColour" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Reservation">
+    <Key>
+      <PropertyRef Name="ReservationId" />
+    </Key>
+    <Property Name="ReservationId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserEmail" Type="varchar" Nullable="false" MaxLength="300" />
+    <Property Name="RestaurantId" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ReservationDate" Type="datetime" Nullable="false" />
+    <Property Name="ReservationHour" Type="int" Nullable="false" />
+    <Property Name="ReservationMinute" Type="int" Nullable="false" />
+    <Property Name="IsPM" Type="bit" Nullable="false" />
+    <Property Name="NumberOfPatrons" Type="int" Nullable="false" />
+    <Property Name="IsAcceptedByRestaurant" Type="bit" />
+  </EntityType>
+  <EntityType Name="RestaurantCategory">
+    <Key>
+      <PropertyRef Name="RestaurantCategoryId" />
+    </Key>
+    <Property Name="RestaurantCategoryId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CountryId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="StateCode" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="StatsBarMenuViews">
+    <Key>
+      <PropertyRef Name="StatsBarMenuViewsId" />
+    </Key>
+    <Property Name="StatsBarMenuViewsId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Time" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatsBlogPostViews">
+    <Key>
+      <PropertyRef Name="StatsBlogPostViewsId" />
+    </Key>
+    <Property Name="StatsBlogPostViewsId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BlogPostId" Type="int" Nullable="false" />
+    <Property Name="Time" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatsFoodMenuViews">
+    <Key>
+      <PropertyRef Name="StatsFoodMenuViewsId" />
+    </Key>
+    <Property Name="StatsFoodMenuViewsId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Time" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatsProductListViews">
+    <Key>
+      <PropertyRef Name="StatsProductListViewsId" />
+    </Key>
+    <Property Name="StatsProductListViewsId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Time" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatsProfileViews">
+    <Key>
+      <PropertyRef Name="StatsProfileViewsId" />
+    </Key>
+    <Property Name="StatsProfileViewsId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Time" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StatsStoryViews">
+    <Key>
+      <PropertyRef Name="StatsStoryViewsId" />
+    </Key>
+    <Property Name="StatsStoryViewsId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Time" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TempBusinessRegistrationInfo">
+    <Key>
+      <PropertyRef Name="TempBusinessRegistrationInfoId" />
+    </Key>
+    <Property Name="TempBusinessRegistrationInfoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegistrationKey" Type="nvarchar" MaxLength="200" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="TempProducerRegistrationClaimedBeverage">
+    <Key>
+      <PropertyRef Name="TempProducerRegistrationClaimedBeverageId" />
+    </Key>
+    <Property Name="TempProducerRegistrationClaimedBeverageId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TempProducerRegistrationInfoId" Type="int" Nullable="false" />
+    <Property Name="BeverageId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TempProducerRegistrationInfo">
+    <Key>
+      <PropertyRef Name="TempProducerRegistrationInfoId" />
+    </Key>
+    <Property Name="TempProducerRegistrationInfoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RegistrationKey" Type="nvarchar(max)" />
+    <Property Name="AccountConfirmationToken" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="200" />
+    <Property Name="ClaimedBeverageProducerId" Type="int" />
+  </EntityType>
+  <EntityType Name="UserBeverageXRef">
+    <Key>
+      <PropertyRef Name="UserBeverageXRefId" />
+    </Key>
+    <Property Name="UserBeverageXRefId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="BeverageId" Type="int" Nullable="false" />
+    <Property Name="DoesLike" Type="bit" Nullable="false" />
+    <Property Name="Experienced" Type="bit" Nullable="false" />
+    <Property Name="Favourite" Type="bit" Nullable="false" />
+    <Property Name="Want" Type="bit" Nullable="false" />
+    <Property Name="InCellar" Type="bit" Nullable="false" />
+    <Property Name="ReviewTitle" Type="nvarchar" MaxLength="200" />
+    <Property Name="Review" Type="text" />
+    <Property Name="Rating" Type="decimal" Scale="2" />
+    <Property Name="DateLiked" Type="datetime" />
+    <Property Name="DateRated" Type="datetime" />
+    <Property Name="DateReviewed" Type="datetime" />
+    <Property Name="DateWanted" Type="datetime" />
+    <Property Name="DateFavourited" Type="datetime" />
+    <Property Name="DateExperienced" Type="datetime" />
+    <Property Name="DateAddedToCellar" Type="datetime" />
+    <Property Name="DateAddedToDailySpecials" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserBusinessXRef">
+    <Key>
+      <PropertyRef Name="UserBusinessXRefId" />
+    </Key>
+    <Property Name="UserBusinessXRefId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="BusinessUserId" Type="int" Nullable="false" />
+    <Property Name="Rating" Type="decimal" Scale="2" />
+    <Property Name="DoesLike" Type="bit" Nullable="false" />
+    <Property Name="DateLiked" Type="datetime" />
+    <Property Name="DateRated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserEvent">
+    <Key>
+      <PropertyRef Name="UserEventId" />
+    </Key>
+    <Property Name="UserEventId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Details" Type="text" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="ImageUrl" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserFoodItemXRef">
+    <Key>
+      <PropertyRef Name="UserFoodItemXRefId" />
+    </Key>
+    <Property Name="UserFoodItemXRefId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="BusinessFoodItemId" Type="int" Nullable="false" />
+    <Property Name="DoesLike" Type="bit" Nullable="false" />
+    <Property Name="Rating" Type="decimal" Scale="2" />
+    <Property Name="ReviewTitle" Type="nvarchar" MaxLength="200" />
+    <Property Name="Review" Type="text" />
+    <Property Name="Want" Type="bit" Nullable="false" />
+    <Property Name="Favourite" Type="bit" Nullable="false" />
+    <Property Name="DateLiked" Type="datetime" />
+    <Property Name="DateRated" Type="datetime" />
+    <Property Name="DateReviewed" Type="datetime" />
+    <Property Name="DateWanted" Type="datetime" />
+    <Property Name="DateFavourited" Type="datetime" />
+    <Property Name="DateAddedToDailySpecials" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserIsAttendingEvent">
+    <Key>
+      <PropertyRef Name="UserIsAttendingEventId" />
+    </Key>
+    <Property Name="UserIsAttendingEventId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="UserEventId" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserPhoto">
+    <Key>
+      <PropertyRef Name="UserPhotoId" />
+    </Key>
+    <Property Name="UserPhotoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" />
+    <Property Name="Caption" Type="text" />
+    <Property Name="ImageUrl" Type="nvarchar" Nullable="false" MaxLength="1000" />
+    <Property Name="UserPhotoAlbumId" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserPhotoAlbum">
+    <Key>
+      <PropertyRef Name="UserPhotoAlbumId" />
+    </Key>
+    <Property Name="UserPhotoAlbumId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserProducerXRef">
+    <Key>
+      <PropertyRef Name="UserProducerXRefId" />
+    </Key>
+    <Property Name="UserProducerXRefId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ProducerUserId" Type="int" Nullable="false" />
+    <Property Name="DoesLike" Type="bit" Nullable="false" />
+    <Property Name="DateLiked" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MembershipId" Type="int" />
+    <Property Name="ProfileCoverPhotoId" Type="int" />
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="Name" Type="varchar" MaxLength="200" />
+    <Property Name="ProfilePicturePath" Type="varchar" MaxLength="500" />
+    <Property Name="PreviewImagePath" Type="varchar" MaxLength="500" />
+    <Property Name="ThumbnailPicturePath" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="Latitude" Type="decimal" Precision="12" Scale="8" />
+    <Property Name="Longitude" Type="decimal" Precision="12" Scale="8" />
+    <Property Name="CityId" Type="int" />
+    <Property Name="StateId" Type="int" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="PostalCode" Type="varchar" MaxLength="200" />
+    <Property Name="Address" Type="text" />
+    <Property Name="About" Type="text" />
+    <Property Name="ProfileThemeId" Type="int" Nullable="false" />
+    <Property Name="StripeCustomerId" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="UserVideo">
+    <Key>
+      <PropertyRef Name="UserVideoId" />
+    </Key>
+    <Property Name="UserVideoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="Description" Type="text" />
+    <Property Name="EmbedCode" Type="text" Nullable="false" />
+    <Property Name="YoutubeVideoId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Varietal">
+    <Key>
+      <PropertyRef Name="VarietalId" />
+    </Key>
+    <Property Name="VarietalId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ViticultureRegion">
+    <Key>
+      <PropertyRef Name="ViticultureRegionId" />
+    </Key>
+    <Property Name="ViticultureRegionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ParentViticultureRegionId" Type="int" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="WebCrawler">
+    <Key>
+      <PropertyRef Name="WebCrawlerId" />
+    </Key>
+    <Property Name="WebCrawlerId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="LastRunStatus" Type="text" />
+    <Property Name="LastRunTime" Type="datetime" />
+    <Property Name="IsRunning" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="MembershipId" />
+    </Key>
+    <Property Name="MembershipId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ConfirmationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsConfirmed" Type="bit" />
+    <Property Name="LastPasswordFailureDate" Type="datetime" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordChangedDate" Type="datetime" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordVerificationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="ProviderUserId" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="webpages_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_BarMenuBeverageInstance_BusinessBeverageCategory">
+    <End Role="BusinessBeverageCategory" Type="PourtraitBetaModel.Store.BusinessBeverageCategory" Multiplicity="1" />
+    <End Role="BarMenuBeverageInstance" Type="PourtraitBetaModel.Store.BarMenuBeverageInstance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessBeverageCategory">
+        <PropertyRef Name="BusinessBeverageCategoryId" />
+      </Principal>
+      <Dependent Role="BarMenuBeverageInstance">
+        <PropertyRef Name="BusinessBeverageCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BasicUser_BasicUserLabel">
+    <End Role="BasicUserLabel" Type="PourtraitBetaModel.Store.BasicUserLabel" Multiplicity="0..1" />
+    <End Role="BasicUser" Type="PourtraitBetaModel.Store.BasicUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BasicUserLabel">
+        <PropertyRef Name="BasicUserLabelId" />
+      </Principal>
+      <Dependent Role="BasicUser">
+        <PropertyRef Name="BasicUserLabelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Beverage_AlcByVolume">
+    <End Role="AlcoholByVolume" Type="PourtraitBetaModel.Store.AlcoholByVolume" Multiplicity="0..1" />
+    <End Role="Beverage" Type="PourtraitBetaModel.Store.Beverage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AlcoholByVolume">
+        <PropertyRef Name="AlcoholByVolumeId" />
+      </Principal>
+      <Dependent Role="Beverage">
+        <PropertyRef Name="AlcoholByVolumeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Beverage_BeverageBrand">
+    <End Role="BeverageBrand" Type="PourtraitBetaModel.Store.BeverageBrand" Multiplicity="0..1" />
+    <End Role="Beverage" Type="PourtraitBetaModel.Store.Beverage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BeverageBrand">
+        <PropertyRef Name="BeverageBrandId" />
+      </Principal>
+      <Dependent Role="Beverage">
+        <PropertyRef Name="BeverageBrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Beverage_BeverageProducer">
+    <End Role="BeverageProducer" Type="PourtraitBetaModel.Store.BeverageProducer" Multiplicity="0..1" />
+    <End Role="Beverage" Type="PourtraitBetaModel.Store.Beverage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BeverageProducer">
+        <PropertyRef Name="BeverageProducerId" />
+      </Principal>
+      <Dependent Role="Beverage">
+        <PropertyRef Name="BeverageProducerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Beverage_BeverageType">
+    <End Role="BeverageType" Type="PourtraitBetaModel.Store.BeverageType" Multiplicity="0..1" />
+    <End Role="Beverage" Type="PourtraitBetaModel.Store.Beverage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BeverageType">
+        <PropertyRef Name="BeverageTypeId" />
+      </Principal>
+      <Dependent Role="Beverage">
+        <PropertyRef Name="BeverageTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Beverage_City">
+    <End Role="City" Type="PourtraitBetaModel.Store.City" Multiplicity="0..1" />
+    <End Role="Beverage" Type="PourtraitBetaModel.Store.Beverage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityId" />
+      </Principal>
+      <Dependent Role="Beverage">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Beverage_ProducerBeverageCategory">
+    <End Role="ProducerBeverageCategory" Type="PourtraitBetaModel.Store.ProducerBeverageCategory" Multiplicity="0..1" />
+    <End Role="Beverage" Type="PourtraitBetaModel.Store.Beverage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProducerBeverageCategory">
+        <PropertyRef Name="ProducerBeverageCategoryId" />
+      </Principal>
+      <Dependent Role="Beverage">
+        <PropertyRef Name="ProducerBeverageCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Beverage_State">
+    <End Role="State" Type="PourtraitBetaModel.Store.State" Multiplicity="0..1" />
+    <End Role="Beverage" Type="PourtraitBetaModel.Store.Beverage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="Beverage">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Beverage_ViticultureRegion">
+    <End Role="ViticultureRegion" Type="PourtraitBetaModel.Store.ViticultureRegion" Multiplicity="0..1" />
+    <End Role="Beverage" Type="PourtraitBetaModel.Store.Beverage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ViticultureRegion">
+        <PropertyRef Name="ViticultureRegionId" />
+      </Principal>
+      <Dependent Role="Beverage">
+        <PropertyRef Name="ViticultureRegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BeverageAward_Beverage">
+    <End Role="Beverage" Type="PourtraitBetaModel.Store.Beverage" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BeverageAward" Type="PourtraitBetaModel.Store.BeverageAward" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Beverage">
+        <PropertyRef Name="BeverageId" />
+      </Principal>
+      <Dependent Role="BeverageAward">
+        <PropertyRef Name="BeverageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BeverageBrand_CrawledProducer">
+    <End Role="BeverageProducer" Type="PourtraitBetaModel.Store.BeverageProducer" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BeverageBrand" Type="PourtraitBetaModel.Store.BeverageBrand" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BeverageProducer">
+        <PropertyRef Name="BeverageProducerId" />
+      </Principal>
+      <Dependent Role="BeverageBrand">
+        <PropertyRef Name="CrawledProducerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BeverageSubType_BeverageType">
+    <End Role="BeverageType" Type="PourtraitBetaModel.Store.BeverageType" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BeverageSubType" Type="PourtraitBetaModel.Store.BeverageSubType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BeverageType">
+        <PropertyRef Name="BeverageTypeId" />
+      </Principal>
+      <Dependent Role="BeverageSubType">
+        <PropertyRef Name="BeverageTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BeverageSubTypeXRef_Beverage">
+    <End Role="Beverage" Type="PourtraitBetaModel.Store.Beverage" Multiplicity="1" />
+    <End Role="BeverageSubTypeXRef" Type="PourtraitBetaModel.Store.BeverageSubTypeXRef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Beverage">
+        <PropertyRef Name="BeverageId" />
+      </Principal>
+      <Dependent Role="BeverageSubTypeXRef">
+        <PropertyRef Name="BeverageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BeverageSubTypeXRef_BeverageSubType">
+    <End Role="BeverageSubType" Type="PourtraitBetaModel.Store.BeverageSubType" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BeverageSubTypeXRef" Type="PourtraitBetaModel.Store.BeverageSubTypeXRef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BeverageSubType">
+        <PropertyRef Name="BeverageSubTypeId" />
+      </Principal>
+      <Dependent Role="BeverageSubTypeXRef">
+        <PropertyRef Name="BeverageSubTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BeverageVarietal_Beverage">
+    <End Role="Beverage" Type="PourtraitBetaModel.Store.Beverage" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BeverageVarietalXRef" Type="PourtraitBetaModel.Store.BeverageVarietalXRef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Beverage">
+        <PropertyRef Name="BeverageId" />
+      </Principal>
+      <Dependent Role="BeverageVarietalXRef">
+        <PropertyRef Name="BeverageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BeverageVarietalXRef_Varietal">
+    <End Role="Varietal" Type="PourtraitBetaModel.Store.Varietal" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BeverageVarietalXRef" Type="PourtraitBetaModel.Store.BeverageVarietalXRef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Varietal">
+        <PropertyRef Name="VarietalId" />
+      </Principal>
+      <Dependent Role="BeverageVarietalXRef">
+        <PropertyRef Name="VarietalId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BlogPost_UserProfile">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BlogPost" Type="PourtraitBetaModel.Store.BlogPost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="BlogPost">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessBeverageCategory_BusinessBeverageMenu">
+    <End Role="BusinessBeverageMenu" Type="PourtraitBetaModel.Store.BusinessBeverageMenu" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BusinessBeverageCategory" Type="PourtraitBetaModel.Store.BusinessBeverageCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessBeverageMenu">
+        <PropertyRef Name="BusinessBeverageMenuId" />
+      </Principal>
+      <Dependent Role="BusinessBeverageCategory">
+        <PropertyRef Name="BusinessBeverageMenuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessBeverageFoodPairing_BusinessFoodItem">
+    <End Role="BusinessFoodItem" Type="PourtraitBetaModel.Store.BusinessFoodItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BusinessBeverageFoodPairing" Type="PourtraitBetaModel.Store.BusinessBeverageFoodPairing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessFoodItem">
+        <PropertyRef Name="BusinessFoodItemId" />
+      </Principal>
+      <Dependent Role="BusinessBeverageFoodPairing">
+        <PropertyRef Name="BusinessFoodItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessBeverageFoodPairing_BusinessUserBeverageXRef">
+    <End Role="BusinessUserBeverageXRef" Type="PourtraitBetaModel.Store.BusinessUserBeverageXRef" Multiplicity="1" />
+    <End Role="BusinessBeverageFoodPairing" Type="PourtraitBetaModel.Store.BusinessBeverageFoodPairing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessUserBeverageXRef">
+        <PropertyRef Name="BusinessUserBeverageXRefId" />
+      </Principal>
+      <Dependent Role="BusinessBeverageFoodPairing">
+        <PropertyRef Name="BusinessUserBeverageXRefId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessBeverageMenuId_BusinessUser">
+    <End Role="BusinessUser" Type="PourtraitBetaModel.Store.BusinessUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BusinessBeverageMenu" Type="PourtraitBetaModel.Store.BusinessBeverageMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessUser">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="BusinessBeverageMenu">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessDrinkSpecial_BusinessUserBeverageXRef">
+    <End Role="BarMenuBeverageInstance" Type="PourtraitBetaModel.Store.BarMenuBeverageInstance" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BusinessDrinkSpecial" Type="PourtraitBetaModel.Store.BusinessDrinkSpecial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BarMenuBeverageInstance">
+        <PropertyRef Name="BarMenuBeverageInstanceId" />
+      </Principal>
+      <Dependent Role="BusinessDrinkSpecial">
+        <PropertyRef Name="BarMenuBeverageInstanceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessFoodItemCategory_FoodMenu">
+    <End Role="FoodMenu" Type="PourtraitBetaModel.Store.FoodMenu" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BusinessFoodItemCategory" Type="PourtraitBetaModel.Store.BusinessFoodItemCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FoodMenu">
+        <PropertyRef Name="FoodMenuId" />
+      </Principal>
+      <Dependent Role="BusinessFoodItemCategory">
+        <PropertyRef Name="FoodMenuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessFoodSpecial_BusinessFoodItem">
+    <End Role="BusinessFoodItem" Type="PourtraitBetaModel.Store.BusinessFoodItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BusinessFoodSpecial" Type="PourtraitBetaModel.Store.BusinessFoodSpecial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessFoodItem">
+        <PropertyRef Name="BusinessFoodItemId" />
+      </Principal>
+      <Dependent Role="BusinessFoodSpecial">
+        <PropertyRef Name="BusinessFoodItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessHour_UserProfile">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BusinessHour" Type="PourtraitBetaModel.Store.BusinessHour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="BusinessHour">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessUserBeveragePrice_BusinessUserBeverageXRef">
+    <End Role="BusinessUserBeverageXRef" Type="PourtraitBetaModel.Store.BusinessUserBeverageXRef" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BarMenuBeverageInstance" Type="PourtraitBetaModel.Store.BarMenuBeverageInstance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessUserBeverageXRef">
+        <PropertyRef Name="BusinessUserBeverageXRefId" />
+      </Principal>
+      <Dependent Role="BarMenuBeverageInstance">
+        <PropertyRef Name="BusinessUserBeverageXRefId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessUserBeverageXRef_BusinessUser">
+    <End Role="BusinessUser" Type="PourtraitBetaModel.Store.BusinessUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BusinessUserBeverageXRef" Type="PourtraitBetaModel.Store.BusinessUserBeverageXRef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessUser">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="BusinessUserBeverageXRef">
+        <PropertyRef Name="BusinessUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessUserRestaurantCategoryXRef_BusinessUser">
+    <End Role="BusinessUser" Type="PourtraitBetaModel.Store.BusinessUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BusinessUserRestaurantCategoryXRef" Type="PourtraitBetaModel.Store.BusinessUserRestaurantCategoryXRef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessUser">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="BusinessUserRestaurantCategoryXRef">
+        <PropertyRef Name="BusinessUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessUserRestaurantCategoryXRef_RestaurantCategory">
+    <End Role="RestaurantCategory" Type="PourtraitBetaModel.Store.RestaurantCategory" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BusinessUserRestaurantCategoryXRef" Type="PourtraitBetaModel.Store.BusinessUserRestaurantCategoryXRef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RestaurantCategory">
+        <PropertyRef Name="RestaurantCategoryId" />
+      </Principal>
+      <Dependent Role="BusinessUserRestaurantCategoryXRef">
+        <PropertyRef Name="RestaurantCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_City_Country">
+    <End Role="Country" Type="PourtraitBetaModel.Store.Country" Multiplicity="0..1" />
+    <End Role="City" Type="PourtraitBetaModel.Store.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_City_State">
+    <End Role="State" Type="PourtraitBetaModel.Store.State" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="City" Type="PourtraitBetaModel.Store.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Event_UserProfile">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserEvent" Type="PourtraitBetaModel.Store.UserEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserEvent">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Followee_UserProfile">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Follow" Type="PourtraitBetaModel.Store.Follow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Follow">
+        <PropertyRef Name="FolloweeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Follower_UserProfile">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="1" />
+    <End Role="Follow" Type="PourtraitBetaModel.Store.Follow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Follow">
+        <PropertyRef Name="FollowerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FoodMenu_BusinessUser">
+    <End Role="BusinessUser" Type="PourtraitBetaModel.Store.BusinessUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FoodMenu" Type="PourtraitBetaModel.Store.FoodMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessUser">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="FoodMenu">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LearnArticle_LearnCategory">
+    <End Role="LearnCategory" Type="PourtraitBetaModel.Store.LearnCategory" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="LearnArticle" Type="PourtraitBetaModel.Store.LearnArticle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LearnCategory">
+        <PropertyRef Name="LearnCategoryId" />
+      </Principal>
+      <Dependent Role="LearnArticle">
+        <PropertyRef Name="LearnCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Message_FromUserProfile">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Message" Type="PourtraitBetaModel.Store.Message" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Message">
+        <PropertyRef Name="FromUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Message_ToUserProfile">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="1" />
+    <End Role="Message" Type="PourtraitBetaModel.Store.Message" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Message">
+        <PropertyRef Name="ToUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProducerBeverageCategory_ProducerUser">
+    <End Role="BeverageProducer" Type="PourtraitBetaModel.Store.BeverageProducer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ProducerBeverageCategory" Type="PourtraitBetaModel.Store.ProducerBeverageCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BeverageProducer">
+        <PropertyRef Name="BeverageProducerId" />
+      </Principal>
+      <Dependent Role="ProducerBeverageCategory">
+        <PropertyRef Name="BeverageProducerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProducerUser_ViticultureRegion">
+    <End Role="ViticultureRegion" Type="PourtraitBetaModel.Store.ViticultureRegion" Multiplicity="0..1" />
+    <End Role="ProducerUser" Type="PourtraitBetaModel.Store.ProducerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ViticultureRegion">
+        <PropertyRef Name="ViticultureRegionId" />
+      </Principal>
+      <Dependent Role="ProducerUser">
+        <PropertyRef Name="ViticultureRegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProfileTheme_UserProfile">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="0..1" />
+    <End Role="ProfileTheme" Type="PourtraitBetaModel.Store.ProfileTheme" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="ProfileTheme">
+        <PropertyRef Name="OwnerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_RoleId">
+    <End Role="webpages_Roles" Type="PourtraitBetaModel.Store.webpages_Roles" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="PourtraitBetaModel.Store.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="webpages_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_State_Country">
+    <End Role="Country" Type="PourtraitBetaModel.Store.Country" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="State" Type="PourtraitBetaModel.Store.State" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="State">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StatsBarMenuViews_BusinessUser">
+    <End Role="BusinessUser" Type="PourtraitBetaModel.Store.BusinessUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StatsBarMenuViews" Type="PourtraitBetaModel.Store.StatsBarMenuViews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessUser">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="StatsBarMenuViews">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StatsBlogPostViews_BlogPost">
+    <End Role="BlogPost" Type="PourtraitBetaModel.Store.BlogPost" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StatsBlogPostViews" Type="PourtraitBetaModel.Store.StatsBlogPostViews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BlogPost">
+        <PropertyRef Name="BlogPostId" />
+      </Principal>
+      <Dependent Role="StatsBlogPostViews">
+        <PropertyRef Name="BlogPostId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StatsFoodMenuViews_BusinessUser">
+    <End Role="BusinessUser" Type="PourtraitBetaModel.Store.BusinessUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StatsFoodMenuViews" Type="PourtraitBetaModel.Store.StatsFoodMenuViews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessUser">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="StatsFoodMenuViews">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StatsProductListViews_ProducerUser">
+    <End Role="ProducerUser" Type="PourtraitBetaModel.Store.ProducerUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StatsProductListViews" Type="PourtraitBetaModel.Store.StatsProductListViews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProducerUser">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="StatsProductListViews">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StatsProfileViews_UserProfile">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StatsProfileViews" Type="PourtraitBetaModel.Store.StatsProfileViews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="StatsProfileViews">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StatsStoryViews_ProducerUser">
+    <End Role="ProducerUser" Type="PourtraitBetaModel.Store.ProducerUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StatsStoryViews" Type="PourtraitBetaModel.Store.StatsStoryViews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProducerUser">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="StatsStoryViews">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TempProducerRegistrationClaimedBeverage_TempProducerRegistrationInfo">
+    <End Role="TempProducerRegistrationInfo" Type="PourtraitBetaModel.Store.TempProducerRegistrationInfo" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TempProducerRegistrationClaimedBeverage" Type="PourtraitBetaModel.Store.TempProducerRegistrationClaimedBeverage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TempProducerRegistrationInfo">
+        <PropertyRef Name="TempProducerRegistrationInfoId" />
+      </Principal>
+      <Dependent Role="TempProducerRegistrationClaimedBeverage">
+        <PropertyRef Name="TempProducerRegistrationInfoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserBeverageXRef_Beverage">
+    <End Role="Beverage" Type="PourtraitBetaModel.Store.Beverage" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserBeverageXRef" Type="PourtraitBetaModel.Store.UserBeverageXRef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Beverage">
+        <PropertyRef Name="BeverageId" />
+      </Principal>
+      <Dependent Role="UserBeverageXRef">
+        <PropertyRef Name="BeverageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserBeverageXRef_UserProfile">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserBeverageXRef" Type="PourtraitBetaModel.Store.UserBeverageXRef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserBeverageXRef">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserBusinessXRef_BusinessUser">
+    <End Role="BusinessUser" Type="PourtraitBetaModel.Store.BusinessUser" Multiplicity="1" />
+    <End Role="UserBusinessXRef" Type="PourtraitBetaModel.Store.UserBusinessXRef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessUser">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserBusinessXRef">
+        <PropertyRef Name="BusinessUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserBusinessXRef_UserProfile">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserBusinessXRef" Type="PourtraitBetaModel.Store.UserBusinessXRef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserBusinessXRef">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserFoodItemXRef_BusinessFoodItem">
+    <End Role="BusinessFoodItem" Type="PourtraitBetaModel.Store.BusinessFoodItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserFoodItemXRef" Type="PourtraitBetaModel.Store.UserFoodItemXRef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessFoodItem">
+        <PropertyRef Name="BusinessFoodItemId" />
+      </Principal>
+      <Dependent Role="UserFoodItemXRef">
+        <PropertyRef Name="BusinessFoodItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserFoodItemXRef_UserProfile">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserFoodItemXRef" Type="PourtraitBetaModel.Store.UserFoodItemXRef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserFoodItemXRef">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserId">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="webpages_UsersInRoles" Type="PourtraitBetaModel.Store.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserIsAttendingEvent_UserEvent">
+    <End Role="UserEvent" Type="PourtraitBetaModel.Store.UserEvent" Multiplicity="1" />
+    <End Role="UserIsAttendingEvent" Type="PourtraitBetaModel.Store.UserIsAttendingEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserEvent">
+        <PropertyRef Name="UserEventId" />
+      </Principal>
+      <Dependent Role="UserIsAttendingEvent">
+        <PropertyRef Name="UserEventId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserIsAttendingEvent_UserProfile">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserIsAttendingEvent" Type="PourtraitBetaModel.Store.UserIsAttendingEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserIsAttendingEvent">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserPhoto_UserPhotoAlbum">
+    <End Role="UserPhotoAlbum" Type="PourtraitBetaModel.Store.UserPhotoAlbum" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserPhoto" Type="PourtraitBetaModel.Store.UserPhoto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserPhotoAlbum">
+        <PropertyRef Name="UserPhotoAlbumId" />
+      </Principal>
+      <Dependent Role="UserPhoto">
+        <PropertyRef Name="UserPhotoAlbumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserPhotoAlbum_UserProfile">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserPhotoAlbum" Type="PourtraitBetaModel.Store.UserPhotoAlbum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserPhotoAlbum">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProducerXRefId_ProducerUser">
+    <End Role="ProducerUser" Type="PourtraitBetaModel.Store.ProducerUser" Multiplicity="1" />
+    <End Role="UserProducerXRef" Type="PourtraitBetaModel.Store.UserProducerXRef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProducerUser">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserProducerXRef">
+        <PropertyRef Name="ProducerUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProducerXRefId_UserProfile">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserProducerXRef" Type="PourtraitBetaModel.Store.UserProducerXRef" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserProducerXRef">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfile_City">
+    <End Role="City" Type="PourtraitBetaModel.Store.City" Multiplicity="0..1" />
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityId" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfile_Country">
+    <End Role="Country" Type="PourtraitBetaModel.Store.Country" Multiplicity="0..1" />
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfile_ProfileCoverPhoto">
+    <End Role="ProfileCoverPhoto" Type="PourtraitBetaModel.Store.ProfileCoverPhoto" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProfileCoverPhoto">
+        <PropertyRef Name="ProfileCoverPhotoId" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="ProfileCoverPhotoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfile_ProfileTheme">
+    <End Role="ProfileTheme" Type="PourtraitBetaModel.Store.ProfileTheme" Multiplicity="1" />
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProfileTheme">
+        <PropertyRef Name="ProfileThemeId" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="ProfileThemeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfile_State">
+    <End Role="State" Type="PourtraitBetaModel.Store.State" Multiplicity="0..1" />
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfile_UserProfile">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="1" />
+    <End Role="UserProfile1" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserProfile1">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfile_webpages_Membership">
+    <End Role="webpages_Membership" Type="PourtraitBetaModel.Store.webpages_Membership" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="webpages_Membership">
+        <PropertyRef Name="MembershipId" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="MembershipId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserVideo_UserProfile">
+    <End Role="UserProfile" Type="PourtraitBetaModel.Store.UserProfile" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserVideo" Type="PourtraitBetaModel.Store.UserVideo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserVideo">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ViticultureRegion_Country">
+    <End Role="Country" Type="PourtraitBetaModel.Store.Country" Multiplicity="0..1" />
+    <End Role="ViticultureRegion" Type="PourtraitBetaModel.Store.ViticultureRegion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="ViticultureRegion">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ViticultureRegion_ViticultureRegion">
+    <End Role="ViticultureRegion" Type="PourtraitBetaModel.Store.ViticultureRegion" Multiplicity="0..1" />
+    <End Role="ViticultureRegion1" Type="PourtraitBetaModel.Store.ViticultureRegion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ViticultureRegion">
+        <PropertyRef Name="ViticultureRegionId" />
+      </Principal>
+      <Dependent Role="ViticultureRegion1">
+        <PropertyRef Name="ParentViticultureRegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="IsUseraBusiness" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userId" Type="int" Mode="In" />
+  </Function>
+</Schema>

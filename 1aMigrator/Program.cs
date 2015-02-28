@@ -1,0 +1,81 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Neo4jClient;
+
+namespace _1aMigrator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var legitBusinesses = new List<UserProfile>();
+
+            using (var db = new onea { })
+            {
+                var client = new GraphClient(new Uri("http://localhost:7474/db/data"));
+                client.Connect();
+
+                var businesses = db.UserProfiles.ToList();
+
+                using (var conn = new SqlConnection("Server=RT-PC\\SQL2012;Database=PourtraitBeta;Trusted_Connection=True;"))
+                {
+                    conn.Open();
+
+                    foreach (var business in businesses)
+                    {
+                        using (var cmd = new SqlCommand("IsUseraBusiness", conn))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            cmd.Parameters.Add("@userId", SqlDbType.Int).Value = business.UserId;
+                            SqlDataReader reader = cmd.ExecuteReader();
+
+                            while (reader.Read())
+                            {
+                                var x = reader[0];
+
+                                if (x != null)
+                                {
+                                    legitBusinesses.Add(business);
+                                    client.Cypher
+                                        .Create("(user:business {biz})")
+                                        .WithParam("biz", new { name = business.Name })
+                                        .ExecuteWithoutResults();
+                                }
+                            }
+
+                            reader.Close();
+                        }
+                    }                    
+                }
+
+
+                //foreach (var biz in businesses)
+                //{
+                //    try
+                //    {
+                //        var business = biz;
+
+                //        if (business == null)
+                //            continue;
+                //        var businessName = business;
+
+                //        client.Cypher
+                //            .Create("(user:business {biz})")
+                //            .WithParam("biz", new { name = businessName })
+                //            .ExecuteWithoutResults();
+                //    }
+                //    catch (Exception e)
+                //    {
+                //        continue;
+                //    }
+                //}
+            }
+        }
+    }
+}

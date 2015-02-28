@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3a7a540290a44d87a1020cdb83dad295" Name="Diagram1">
+        <EntityTypeShape EntityType="PourtraitBetaModel.AlcoholByVolume" Width="1.5" PointX="8.25" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BarMenuBeverageInstance" Width="1.5" PointX="17.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BasicUser" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BasicUserLabel" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.Beverage" Width="1.5" PointX="10.5" PointY="33.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BeverageAward" Width="1.5" PointX="12.75" PointY="37.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BeverageBrand" Width="1.5" PointX="8.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BeverageProducer" Width="1.5" PointX="6" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BeverageSubType" Width="1.5" PointX="13.5" PointY="44.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BeverageSubTypeXRef" Width="1.5" PointX="15.75" PointY="38.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BeverageType" Width="1.5" PointX="8.25" PointY="60.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BeverageVarietalXRef" Width="1.5" PointX="15.75" PointY="41.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BlogPost" Width="1.5" PointX="9.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BusinessBeverageCategory" Width="1.5" PointX="15" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BusinessBeverageFoodPairing" Width="1.5" PointX="15" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BusinessBeverageMenu" Width="1.5" PointX="12.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BusinessDrinkSpecial" Width="1.5" PointX="19.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BusinessFoodItem" Width="1.5" PointX="10.5" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BusinessFoodItemCategory" Width="1.5" PointX="15" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BusinessFoodSpecial" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BusinessHour" Width="1.5" PointX="9.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BusinessUser" Width="1.5" PointX="10.5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BusinessUserBeverageXRef" Width="1.5" PointX="12.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.BusinessUserRestaurantCategoryXRef" Width="1.5" PointX="17.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.City" Width="1.5" PointX="5.25" PointY="34.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.Country" Width="1.5" PointX="0.75" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.Feedback" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.Follow" Width="1.5" PointX="9.75" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.FoodMenu" Width="1.5" PointX="12.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.LearnArticle" Width="1.5" PointX="5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.LearnCategory" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.Message" Width="1.5" PointX="9.75" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.ProducerBeverageCategory" Width="1.5" PointX="8.25" PointY="63.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.ProducerUser" Width="1.5" PointX="5.25" PointY="38.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.ProfileCoverPhoto" Width="1.5" PointX="5.25" PointY="28.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.ProfileTheme" Width="1.5" PointX="9.75" PointY="43.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.Reservation" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.RestaurantCategory" Width="1.5" PointX="15.5" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.State" Width="1.5" PointX="3" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.StatsBarMenuView" Width="1.5" PointX="12.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.StatsBlogPostView" Width="1.5" PointX="12" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.StatsFoodMenuView" Width="1.5" PointX="12.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.StatsProductListView" Width="1.5" PointX="7.5" PointY="38.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.StatsProfileView" Width="1.5" PointX="9.75" PointY="47.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.StatsStoryView" Width="1.5" PointX="7.5" PointY="40.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.TempBusinessRegistrationInfo" Width="1.5" PointX="7.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.TempProducerRegistrationClaimedBeverage" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.TempProducerRegistrationInfo" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.UserBeverageXRef" Width="1.5" PointX="15.75" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.UserBusinessXRef" Width="1.5" PointX="12.75" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.UserEvent" Width="1.5" PointX="9.75" PointY="50.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.UserFoodItemXRef" Width="1.5" PointX="12.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.UserIsAttendingEvent" Width="1.5" PointX="13" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.UserPhoto" Width="1.5" PointX="12" PointY="53.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.UserPhotoAlbum" Width="1.5" PointX="9.75" PointY="54" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.UserProducerXRef" Width="1.5" PointX="15.75" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.UserProfile" Width="1.5" PointX="7.5" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.UserVideo" Width="1.5" PointX="9.75" PointY="57.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.Varietal" Width="1.5" PointX="13.5" PointY="47.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.ViticultureRegion" Width="1.5" PointX="3" PointY="39.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.WebCrawler" Width="1.5" PointX="5.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.webpages_Membership" Width="1.5" PointX="5.25" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.webpages_OAuthMembership" Width="1.5" PointX="7.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PourtraitBetaModel.webpages_Roles" Width="1.5" PointX="5.25" PointY="31.375" IsExpanded="true" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_Beverage_AlcByVolume" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BarMenuBeverageInstance_BusinessBeverageCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BusinessDrinkSpecial_BusinessUserBeverageXRef" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BusinessUserBeveragePrice_BusinessUserBeverageXRef" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BasicUser_BasicUserLabel" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_Beverage_BeverageBrand" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_Beverage_BeverageProducer" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_Beverage_BeverageType" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_Beverage_City" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_Beverage_ProducerBeverageCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_Beverage_State" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_Beverage_ViticultureRegion" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BeverageAward_Beverage" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BeverageSubTypeXRef_Beverage" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BeverageVarietal_Beverage" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserBeverageXRef_Beverage" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BeverageBrand_CrawledProducer" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_ProducerBeverageCategory_ProducerUser" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BeverageSubType_BeverageType" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BeverageSubTypeXRef_BeverageSubType" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BeverageVarietalXRef_Varietal" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BlogPost_UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_StatsBlogPostViews_BlogPost" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BusinessBeverageCategory_BusinessBeverageMenu" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BusinessBeverageFoodPairing_BusinessFoodItem" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BusinessBeverageFoodPairing_BusinessUserBeverageXRef" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BusinessBeverageMenuId_BusinessUser" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BusinessFoodSpecial_BusinessFoodItem" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserFoodItemXRef_BusinessFoodItem" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BusinessFoodItemCategory_FoodMenu" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BusinessHour_UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BusinessUserBeverageXRef_BusinessUser" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BusinessUserRestaurantCategoryXRef_BusinessUser" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_FoodMenu_BusinessUser" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_StatsBarMenuViews_BusinessUser" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_StatsFoodMenuViews_BusinessUser" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserBusinessXRef_BusinessUser" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_BusinessUserRestaurantCategoryXRef_RestaurantCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_City_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_City_State" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserProfile_City" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_State_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserProfile_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_ViticultureRegion_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_Followee_UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_Follower_UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_LearnArticle_LearnCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_Message_FromUserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_Message_ToUserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_ProducerUser_ViticultureRegion" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_StatsProductListViews_ProducerUser" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_StatsStoryViews_ProducerUser" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserProducerXRefId_ProducerUser" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserProfile_ProfileCoverPhoto" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_ProfileTheme_UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserProfile_ProfileTheme" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserProfile_State" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_StatsProfileViews_UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_TempProducerRegistrationClaimedBeverage_TempProducerRegistrationInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserBeverageXRef_UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserBusinessXRef_UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_Event_UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserIsAttendingEvent_UserEvent" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserFoodItemXRef_UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserIsAttendingEvent_UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserPhoto_UserPhotoAlbum" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserPhotoAlbum_UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserProducerXRefId_UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserProfile_UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserProfile_webpages_Membership" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_UserVideo_UserProfile" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.FK_ViticultureRegion_ViticultureRegion" ManuallyRouted="false" />
+        <AssociationConnector Association="PourtraitBetaModel.webpages_UsersInRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
