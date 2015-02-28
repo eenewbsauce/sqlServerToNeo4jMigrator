@@ -119,6 +119,7 @@
     <Compile Include="BlogPost.cs">
       <DependentUpon>1a.tt</DependentUpon>
     </Compile>
+    <Compile Include="Business.cs" />
     <Compile Include="BusinessBeverageCategory.cs">
       <DependentUpon>1a.tt</DependentUpon>
     </Compile>

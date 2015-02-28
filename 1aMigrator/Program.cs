@@ -19,9 +19,10 @@ namespace _1aMigrator
                 client.Connect();
 
                 var businesses = GetBusinesses(db);
-                CreateBusinessNodes(db, client, businesses);
+                //CreateBusinessNodes(db, client, businesses);
                 //CreateDaysOfWeekNodes(client);
                 RelateBusinessesWithDaysAndSepcials(db, client, businesses);
+                //Console.ReadLine();
             }
         }
 
@@ -78,15 +79,37 @@ namespace _1aMigrator
                 dayFoodSpecials[fs.DayOfWeek].Add(fs);
             }
 
+           
+
+            //var business = tester.Results;
+            //var first = business.First();
+            //var name = first.name;
+
             foreach (var key in dayFoodSpecials.Keys)
             {
                 foreach (var fs in dayFoodSpecials[key]) 
                 {
-                    client.Cypher
-                        .Match("(day:day {day})")
-                        .WithParam("day", new { day = key.ToLower() })
-                        .ExecuteWithoutResults();
+                    var businessId = db.BusinessFoodItemCategories.Find(fs.BusinessFoodItem.BusinessFoodItemCategoryId).FoodMenu.UserId;
+                    var businessName = db.UserProfiles.Find(businessId).Name;
 
+                    var tester = client.Cypher
+                       .Match(string.Concat("(n:business {name:\"", businessName.Replace("'", "\'"), "\"})"))
+                       .Return(n => n.As<Business>());
+
+                    Console.WriteLine(tester.Results.First().name);
+
+                    //var test = client.Cypher
+                    //    //.Match("(d:day {day:'" + key.ToLower() + "'})")
+                    //    .Match("(p:business {name: '" + businessName + "'})")
+                    //    .Return(x =>
+                    //        Console.WriteLine(x.ToString());
+                    //        return x.As<Business>();
+                    //    });
+                        //.Merge("(d)-[r:RESTAURANT_HAS_SPECIAL]->(p)")
+                        //.Return(p => p.As<Business>());
+                    //var another = test.Results.ToList();
+                    //var first = another.First();
+                    //Console.WriteLine(first.Name);
                 }
             }
         }
@@ -97,7 +120,7 @@ namespace _1aMigrator
             foreach (var day in days) 
             {
                 client.Cypher
-                .Create("(user:day {day})")
+                .Create("(n:day {day})")
                 .WithParam("day", new { day = day })
                 .ExecuteWithoutResults();
             }            
@@ -108,7 +131,7 @@ namespace _1aMigrator
             foreach (var business in businesses)
             {                    
                 client.Cypher
-                    .Create("(user:business {biz})")
+                    .Create("(n:business {biz})")
                     .WithParam("biz", new { name = business.Name })
                     .ExecuteWithoutResults();                          
             }            
