@@ -18,3 +18,23 @@ c:\users\rt\documents\visual studio 2012\Projects\1aMigrator\1aMigrator\bin\Debu
 c:\users\rt\documents\visual studio 2012\Projects\1aMigrator\1aMigrator\bin\Debug\System.Net.Http.Primitives.xml
 c:\users\rt\documents\visual studio 2012\Projects\1aMigrator\1aMigrator\obj\Debug\1aMigrator.exe
 c:\users\rt\documents\visual studio 2012\Projects\1aMigrator\1aMigrator\obj\Debug\1aMigrator.pdb
+C:\Work\1aMigrator\1aMigrator\bin\Debug\1aMigrator.exe.config
+C:\Work\1aMigrator\1aMigrator\obj\Debug\1aMigrator.exe
+C:\Work\1aMigrator\1aMigrator\obj\Debug\1aMigrator.pdb
+C:\Work\1aMigrator\1aMigrator\bin\Debug\1aMigrator.exe
+C:\Work\1aMigrator\1aMigrator\bin\Debug\1aMigrator.pdb
+C:\Work\1aMigrator\1aMigrator\bin\Debug\EntityFramework.dll
+C:\Work\1aMigrator\1aMigrator\bin\Debug\EntityFramework.SqlServer.dll
+C:\Work\1aMigrator\1aMigrator\bin\Debug\Neo4jClient.dll
+C:\Work\1aMigrator\1aMigrator\bin\Debug\Newtonsoft.Json.dll
+C:\Work\1aMigrator\1aMigrator\bin\Debug\System.Net.Http.Extensions.dll
+C:\Work\1aMigrator\1aMigrator\bin\Debug\System.Net.Http.Primitives.dll
+C:\Work\1aMigrator\1aMigrator\bin\Debug\EntityFramework.xml
+C:\Work\1aMigrator\1aMigrator\bin\Debug\EntityFramework.SqlServer.xml
+C:\Work\1aMigrator\1aMigrator\bin\Debug\Neo4jClient.pdb
+C:\Work\1aMigrator\1aMigrator\bin\Debug\Neo4jClient.xml
+C:\Work\1aMigrator\1aMigrator\bin\Debug\Newtonsoft.Json.xml
+C:\Work\1aMigrator\1aMigrator\bin\Debug\System.Net.Http.Extensions.xml
+C:\Work\1aMigrator\1aMigrator\bin\Debug\System.Net.Http.Primitives.xml
+C:\Work\1aMigrator\1aMigrator\obj\Debug\1aMigrator.csproj.App.config
+C:\Work\1aMigrator\1aMigrator\obj\Debug\1aMigrator.csprojResolveAssemblyReference.cache
