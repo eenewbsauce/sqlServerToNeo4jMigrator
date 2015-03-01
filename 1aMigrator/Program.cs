@@ -101,7 +101,7 @@ namespace _1aMigrator
                     client.Cypher
                         .Match(string.Concat("(p:business{name:\"", businessName.Replace("'", "\'"), "\"})"))
                         .Match(string.Concat("(f:food {name:\"", fs.BusinessFoodItem.Name, "\"})"))
-                        .Merge(string.Concat("(p)-[r:FOOD_SPECIAL {price:\"", fs.Price, "\", start:\"", fs.StartTime, "\", end:\"", fs.EndTime, "\", dayOfWeek:\"", fs.DayOfWeek, "\"}]->(f)"))
+                        .Merge(string.Concat("(p)-[r:FOOD_SPECIAL {price:\"", fs.Price, "\", start:\"", fs.StartTime, "\", end:\"", fs.EndTime, "\", dayOfWeek:\"", fs.DayOfWeek.ToLower(), "\"}]->(f)"))
                         .ExecuteWithoutResults();
 
                 }
@@ -128,7 +128,7 @@ namespace _1aMigrator
                     client.Cypher
                         .Match(string.Concat("(p:business{name:\"", businessName.Replace("'", "\'"), "\"})"))
                         .Match(string.Concat("(f:drink {name:\"", beverageName, "\"})"))
-                        .Merge(string.Concat("(p)-[r:DRINK_SPECIAL {price:\"", ds.Price, "\", start:\"", ds.StartTime, "\", end:\"", ds.EndTime, "\", dayOfWeek:\"", ds.DayOfWeek, "\"}]->(f)"))
+                        .Merge(string.Concat("(p)-[r:DRINK_SPECIAL {price:\"", ds.Price, "\", start:\"", ds.StartTime, "\", end:\"", ds.EndTime, "\", dayOfWeek:\"", ds.DayOfWeek.ToLower(), "\"}]->(f)"))
                         .ExecuteWithoutResults();
                 }
             }
