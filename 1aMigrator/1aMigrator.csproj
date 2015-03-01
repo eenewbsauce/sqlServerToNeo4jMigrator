@@ -168,6 +168,7 @@
     <Compile Include="FoodMenu.cs">
       <DependentUpon>1a.tt</DependentUpon>
     </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="IsUseraBusiness_Result.cs">
       <DependentUpon>1a.tt</DependentUpon>
     </Compile>

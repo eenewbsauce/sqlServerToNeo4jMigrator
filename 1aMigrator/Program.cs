@@ -19,8 +19,8 @@ namespace _1aMigrator
                 client.Connect();
 
                 var businesses = GetBusinesses(db);
-                //CreateBusinessNodes(db, client, businesses);
-                //CreateDaysOfWeekNodes(client);
+                CreateBusinessNodes(db, client, businesses);
+                CreateDaysOfWeekNodes(client);
                 RelateBusinessesWithDaysAndSepcials(db, client, businesses);
                 //Console.ReadLine();
             }
@@ -67,18 +67,17 @@ namespace _1aMigrator
             var foodSpecials = db.BusinessFoodSpecials.ToList();
             var drinkSpecials = db.BusinessDrinkSpecials.ToList();
 
-            var dayFoodSpecials = new Dictionary<string, List<BusinessFoodSpecial>>();                
-                dayFoodSpecials.Add("Monday", new List<BusinessFoodSpecial>());
-                dayFoodSpecials.Add("Tuesday", new List<BusinessFoodSpecial>());
-                dayFoodSpecials.Add("Wednesday", new List<BusinessFoodSpecial>());
-                dayFoodSpecials.Add("Thursday", new List<BusinessFoodSpecial>());
-                dayFoodSpecials.Add("Friday", new List<BusinessFoodSpecial>());
-                dayFoodSpecials.Add("Saturday", new List<BusinessFoodSpecial>());
-                dayFoodSpecials.Add("Sunday", new List<BusinessFoodSpecial>());
+            var dayFoodSpecials = Helper.InitializeDayFoodSpecials();
+            var dayDrinkSpecials = Helper.InitializeDayDrinkSpecials();
 
             foreach (var fs in foodSpecials)
             {
                 dayFoodSpecials[fs.DayOfWeek].Add(fs);
+            }
+
+            foreach (var ds in drinkSpecials)
+            {
+                dayDrinkSpecials[ds.DayOfWeek].Add(ds);
             }
 
             foreach (var key in dayFoodSpecials.Keys)
@@ -91,9 +90,46 @@ namespace _1aMigrator
                     client.Cypher
                         .Match("(d:day {day:'" + key.ToLower() + "'})")
                         .Match(string.Concat("(p:business {name:\"", businessName.Replace("'", "\'"), "\"})"))
-                        .Merge("(d)-[r:RESTAURANT_HAS_SPECIAL]->(p)")
+                        .Merge("(d)-[r:HAS_FOOD_SPECIAL]->(p)")
                         .ExecuteWithoutResults();
-                   
+                    
+                    client.Cypher
+                        .Create("(n:food {food})")
+                        .WithParam("food", new { name = fs.BusinessFoodItem.Name })
+                        .ExecuteWithoutResults();
+
+                    client.Cypher
+                        .Match(string.Concat("(p:business{name:\"", businessName.Replace("'", "\'"), "\"})"))
+                        .Match(string.Concat("(f:food {name:\"", fs.BusinessFoodItem.Name, "\"})"))
+                        .Merge(string.Concat("(p)-[r:FOOD_SPECIAL {price:\"", fs.Price, "\", start:\"", fs.StartTime, "\", end:\"", fs.EndTime, "\", dayOfWeek:\"", fs.DayOfWeek, "\"}]->(f)"))
+                        .ExecuteWithoutResults();
+
+                }
+            }
+
+            foreach (var key in dayDrinkSpecials.Keys)
+            {
+                foreach (var ds in dayDrinkSpecials[key])
+                {
+                    var businessId = db.BarMenuBeverageInstances.Find(ds.BarMenuBeverageInstanceId).BusinessUserBeverageXRef.BusinessUserId;
+                    var businessName = db.UserProfiles.Find(businessId).Name;
+                    var beverageName = db.Beverages.Find(ds.BarMenuBeverageInstance.BusinessUserBeverageXRef.BeverageId).Name;
+
+                    client.Cypher
+                        .Match("(d:day {day:'" + key.ToLower() + "'})")
+                        .Match(string.Concat("(p:business {name:\"", businessName.Replace("'", "\'"), "\"})"))
+                        .Merge("(d)-[r:HAS_DRINK_SPECIAL]->(p)")
+                        .ExecuteWithoutResults();
+                    client.Cypher
+                        .Create("(n:drink {drink})")
+                        .WithParam("drink", new { name = beverageName })
+                        .ExecuteWithoutResults();
+
+                    client.Cypher
+                        .Match(string.Concat("(p:business{name:\"", businessName.Replace("'", "\'"), "\"})"))
+                        .Match(string.Concat("(f:drink {name:\"", beverageName, "\"})"))
+                        .Merge(string.Concat("(p)-[r:DRINK_SPECIAL {price:\"", ds.Price, "\", start:\"", ds.StartTime, "\", end:\"", ds.EndTime, "\", dayOfWeek:\"", ds.DayOfWeek, "\"}]->(f)"))
+                        .ExecuteWithoutResults();
                 }
             }
         }

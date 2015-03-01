@@ -21,5 +21,19 @@ namespace _1aMigrator
 
             return dayFoodSpecials;
         }
+
+        public static Dictionary<string, List<BusinessDrinkSpecial>> InitializeDayDrinkSpecials()
+        {
+            var dayDrinkSpecials = new Dictionary<string, List<BusinessDrinkSpecial>>();
+            dayDrinkSpecials.Add("Monday", new List<BusinessDrinkSpecial>());
+            dayDrinkSpecials.Add("Tuesday", new List<BusinessDrinkSpecial>());
+            dayDrinkSpecials.Add("Wednesday", new List<BusinessDrinkSpecial>());
+            dayDrinkSpecials.Add("Thursday", new List<BusinessDrinkSpecial>());
+            dayDrinkSpecials.Add("Friday", new List<BusinessDrinkSpecial>());
+            dayDrinkSpecials.Add("Saturday", new List<BusinessDrinkSpecial>());
+            dayDrinkSpecials.Add("Sunday", new List<BusinessDrinkSpecial>());
+
+            return dayDrinkSpecials;
+        }
     }
 }
