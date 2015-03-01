@@ -92,11 +92,15 @@ namespace _1aMigrator
                     var businessId = db.BusinessFoodItemCategories.Find(fs.BusinessFoodItem.BusinessFoodItemCategoryId).FoodMenu.UserId;
                     var businessName = db.UserProfiles.Find(businessId).Name;
 
-                    var tester = client.Cypher
-                       .Match(string.Concat("(n:business {name:\"", businessName.Replace("'", "\'"), "\"})"))
-                       .Return(n => n.As<Business>());
+                    client.Cypher
+                        .Match("(d:day {day:'" + key.ToLower() + "'})")
+                        .Match(string.Concat("(p:business {name:\"", businessName.Replace("'", "\'"), "\"})"))
+                        .Merge("(d)-[r:RESTAURANT_HAS_SPECIAL]->(p)")
+                        .ExecuteWithoutResults();
 
-                    Console.WriteLine(tester.Results.First().name);
+                        //.Return(n => n.As<Business>());
+
+                    //Console.WriteLine(tester.Results.First().name);
 
                     //var test = client.Cypher
                     //    //.Match("(d:day {day:'" + key.ToLower() + "'})")
