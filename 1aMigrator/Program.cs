@@ -65,6 +65,8 @@ namespace _1aMigrator
         private static void RelateBusinessesWithDaysAndSepcials(onea db, GraphClient client, List<UserProfile> businesses)
         {
             var foodSpecials = db.BusinessFoodSpecials.ToList();
+            var drinkSpecials = db.BusinessDrinkSpecials.ToList();
+
             var dayFoodSpecials = new Dictionary<string, List<BusinessFoodSpecial>>();                
                 dayFoodSpecials.Add("Monday", new List<BusinessFoodSpecial>());
                 dayFoodSpecials.Add("Tuesday", new List<BusinessFoodSpecial>());
@@ -79,12 +81,6 @@ namespace _1aMigrator
                 dayFoodSpecials[fs.DayOfWeek].Add(fs);
             }
 
-           
-
-            //var business = tester.Results;
-            //var first = business.First();
-            //var name = first.name;
-
             foreach (var key in dayFoodSpecials.Keys)
             {
                 foreach (var fs in dayFoodSpecials[key]) 
@@ -97,23 +93,7 @@ namespace _1aMigrator
                         .Match(string.Concat("(p:business {name:\"", businessName.Replace("'", "\'"), "\"})"))
                         .Merge("(d)-[r:RESTAURANT_HAS_SPECIAL]->(p)")
                         .ExecuteWithoutResults();
-
-                        //.Return(n => n.As<Business>());
-
-                    //Console.WriteLine(tester.Results.First().name);
-
-                    //var test = client.Cypher
-                    //    //.Match("(d:day {day:'" + key.ToLower() + "'})")
-                    //    .Match("(p:business {name: '" + businessName + "'})")
-                    //    .Return(x =>
-                    //        Console.WriteLine(x.ToString());
-                    //        return x.As<Business>();
-                    //    });
-                        //.Merge("(d)-[r:RESTAURANT_HAS_SPECIAL]->(p)")
-                        //.Return(p => p.As<Business>());
-                    //var another = test.Results.ToList();
-                    //var first = another.First();
-                    //Console.WriteLine(first.Name);
+                   
                 }
             }
         }
