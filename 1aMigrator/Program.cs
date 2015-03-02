@@ -22,7 +22,38 @@ namespace _1aMigrator
                 CreateBusinessNodes(db, client, businesses);
                 CreateDaysOfWeekNodes(client);
                 RelateBusinessesWithDaysAndSepcials(db, client, businesses);
+                CreateGenres(db, client, businesses);
                 //Console.ReadLine();
+            }
+        }
+
+        private static void CreateGenres(onea db, GraphClient client, List<UserProfile> businesses)
+        {
+            var businessIds = businesses.Select(y => y.UserId);
+            var categoryBusinessXrefs = db.BusinessUserRestaurantCategoryXRefs.Where(x => businessIds.Contains(x.BusinessUser.UserId)).ToList();
+            var categoriesDistinct = categoryBusinessXrefs.Select(x => x.RestaurantCategory).Distinct();
+
+            foreach (var cd in categoriesDistinct)
+            {
+                client.Cypher
+                    .Create("(n:genre {genre})")
+                    .WithParam("genre", new { name = cd.Name.ToLower() })
+                    .ExecuteWithoutResults();
+            }
+
+            foreach (var categoryBusiness in categoryBusinessXrefs)
+            {               
+                var businessName = db.UserProfiles.Find(categoryBusiness.BusinessUser.UserId).Name;
+
+                try
+                {
+                    client.Cypher
+                        .Match(string.Concat("(b:business {name:\"", businessName.Replace("'", "\'").Replace("\"", "\""), "\"})"))
+                        .Match(string.Concat("(g:genre {name:\"", categoryBusiness.RestaurantCategory.Name.ToLower(), "\"})"))
+                        .Merge("(b)-[r:HAS_GENRE]->(g)")
+                        .ExecuteWithoutResults();
+                }
+                catch (Exception e) { }
             }
         }
 
