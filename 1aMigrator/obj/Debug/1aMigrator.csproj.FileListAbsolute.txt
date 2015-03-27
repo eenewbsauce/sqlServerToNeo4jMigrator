@@ -38,3 +38,5 @@ C:\Work\1aMigrator\1aMigrator\bin\Debug\System.Net.Http.Extensions.xml
 C:\Work\1aMigrator\1aMigrator\bin\Debug\System.Net.Http.Primitives.xml
 C:\Work\1aMigrator\1aMigrator\obj\Debug\1aMigrator.csproj.App.config
 C:\Work\1aMigrator\1aMigrator\obj\Debug\1aMigrator.csprojResolveAssemblyReference.cache
+C:\Work\1aMigrator\1aMigrator\bin\Debug\AWSSDK.dll
+C:\Work\1aMigrator\1aMigrator\bin\Debug\AWSSDK.pdb

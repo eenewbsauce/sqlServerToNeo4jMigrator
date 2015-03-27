@@ -5,6 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Amazon.S3;
+using Amazon.S3.Model;
 using Neo4jClient;
 
 namespace _1aMigrator
@@ -13,6 +15,7 @@ namespace _1aMigrator
     {
         static void Main(string[] args)
         {
+            //S3Put();
             using (var db = new onea { })
             {
                 var client = new GraphClient(new Uri("http://localhost:7474/db/data"));
@@ -23,8 +26,58 @@ namespace _1aMigrator
                 CreateDaysOfWeekNodes(client);
                 RelateBusinessesWithDaysAndSepcials(db, client, businesses);
                 CreateGenres(db, client, businesses);
-                //Console.ReadLine();
             }
+        }
+
+        private static void S3Put()
+        {
+            //Amazon.Util.ProfileManager.RegisterProfile("s3", "AKIAJDUSJ2KEYKMZCO5A", "eWDZB1m6ZGTe/f2AorhbRYa+TrZWNr2jteVYgNbB");
+            // Create a client
+            AmazonS3Client client = new AmazonS3Client();
+
+            //PutObjectResponse response;
+            //IAsyncResult asyncResult;
+
+            PutObjectRequest request = new PutObjectRequest()
+            {
+                ContentBody = "this is a test",
+                BucketName = "gounce_import",
+                Key = "test"
+            };
+
+            PutObjectResponse response = client.PutObject(request);
+            Console.WriteLine(response.HttpStatusCode);
+
+            //
+            // Create a PutObject request
+            //
+            // You will need to use your own bucket name below in order
+            // to run this sample code.
+            //
+            //PutObjectRequest request = new PutObjectRequest
+            //{
+            //    BucketName = "gounce_import",
+            //    Key = "Item",
+            //    ContentBody = "This is sample content..."
+            //};
+
+            //asyncResult = client.BeginPutObject(request, null, null);
+            //while (!asyncResult.IsCompleted)
+            //{
+            //    //
+            //    // Do some work here
+            //    //
+            //}
+            //try
+            //{
+            //    response = client.EndPutObject(asyncResult);
+            //}
+            //catch (AmazonS3Exception s3Exception)
+            //{
+            //    //
+            //    // Code to process exception
+            //    //
+            //}
         }
 
         private static void CreateGenres(onea db, GraphClient client, List<UserProfile> businesses)
@@ -183,7 +236,17 @@ namespace _1aMigrator
             {                    
                 client.Cypher
                     .Create("(n:business {biz})")
-                    .WithParam("biz", new { name = business.Name })
+                    .WithParam("biz", new { 
+                        name = business.Name.Replace("\"",""), 
+                        longitude = business.Longitude != null ? business.Longitude : 0,
+                        latitude = business.Latitude != null ? business.Latitude : 0,
+                        postal = business.PostalCode != null ? business.PostalCode : "",
+                        address = business.Address != null ? business.Address : "", 
+                        about = business.About != null ? business.About : "",
+                        city = business.City != null ? business.City.Name : "",
+                        state = business.State != null ? business.State.Name: "" ,
+                        image = business.PreviewImagePath != null ? business.PreviewImagePath : ""
+                    })
                     .ExecuteWithoutResults();                          
             }            
         }
