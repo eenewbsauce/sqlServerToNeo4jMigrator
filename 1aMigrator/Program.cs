@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using Amazon.S3;
 using Amazon.S3.Model;
 using Neo4jClient;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace _1aMigrator
 {
@@ -15,7 +18,6 @@ namespace _1aMigrator
     {
         static void Main(string[] args)
         {
-            //S3Put();
             using (var db = new onea { })
             {
                 var client = new GraphClient(new Uri("http://localhost:7474/db/data"));
@@ -29,55 +31,44 @@ namespace _1aMigrator
             }
         }
 
-        private static void S3Put()
+        private static string S3Put(string uri, string name)
         {
-            //Amazon.Util.ProfileManager.RegisterProfile("s3", "AKIAJDUSJ2KEYKMZCO5A", "eWDZB1m6ZGTe/f2AorhbRYa+TrZWNr2jteVYgNbB");
-            // Create a client
-            AmazonS3Client client = new AmazonS3Client();
+            string localFilename = @"c:\temp\s3\temp.jpg";
 
-            //PutObjectResponse response;
-            //IAsyncResult asyncResult;
-
-            PutObjectRequest request = new PutObjectRequest()
+            try
             {
-                ContentBody = "this is a test",
-                BucketName = "gounce_import",
-                Key = "test"
-            };
+                using (var webClient = new WebClient())
+                {
+                    webClient.DownloadFile(string.Format("http://www.pourtrait.com{0}", uri), localFilename);
+                }
 
-            PutObjectResponse response = client.PutObject(request);
-            Console.WriteLine(response.HttpStatusCode);
+                AmazonS3Client client = new AmazonS3Client();
 
-            //
-            // Create a PutObject request
-            //
-            // You will need to use your own bucket name below in order
-            // to run this sample code.
-            //
-            //PutObjectRequest request = new PutObjectRequest
-            //{
-            //    BucketName = "gounce_import",
-            //    Key = "Item",
-            //    ContentBody = "This is sample content..."
-            //};
+                var stream = new System.IO.MemoryStream();
+                var image = Image.FromFile(localFilename);
+                image.Save(stream, ImageFormat.Bmp);
+                stream.Position = 0;
 
-            //asyncResult = client.BeginPutObject(request, null, null);
-            //while (!asyncResult.IsCompleted)
-            //{
-            //    //
-            //    // Do some work here
-            //    //
-            //}
-            //try
-            //{
-            //    response = client.EndPutObject(asyncResult);
-            //}
-            //catch (AmazonS3Exception s3Exception)
-            //{
-            //    //
-            //    // Code to process exception
-            //    //
-            //}
+                var s3Name = name.Replace(" ", "").ToLower();
+
+                PutObjectRequest request = new PutObjectRequest()
+                {
+                    InputStream = stream,
+                    BucketName = "gounce_import",
+                    Key = s3Name,
+                    CannedACL = S3CannedACL.PublicRead
+                };
+
+                PutObjectResponse response = client.PutObject(request);
+
+                return string.Format("https://s3.amazonaws.com/gounce_import/{0}", s3Name);  
+            }
+            catch (Exception e) 
+            {
+                return string.Empty;
+            }
+
+                      
         }
 
         private static void CreateGenres(onea db, GraphClient client, List<UserProfile> businesses)
@@ -179,7 +170,10 @@ namespace _1aMigrator
                     
                     client.Cypher
                         .Create("(n:food {food})")
-                        .WithParam("food", new { name = fs.BusinessFoodItem.Name })
+                        .WithParam("food", new { 
+                            name = fs.BusinessFoodItem.Name,
+                            imageUrl = S3Put(fs.BusinessFoodItem.ImageUrl, fs.BusinessFoodItem.Name)
+                        })
                         .ExecuteWithoutResults();
 
                     client.Cypher
@@ -197,7 +191,7 @@ namespace _1aMigrator
                 {
                     var businessId = db.BarMenuBeverageInstances.Find(ds.BarMenuBeverageInstanceId).BusinessUserBeverageXRef.BusinessUserId;
                     var businessName = db.UserProfiles.Find(businessId).Name;
-                    var beverageName = db.Beverages.Find(ds.BarMenuBeverageInstance.BusinessUserBeverageXRef.BeverageId).Name;
+                    var beverage = db.Beverages.Find(ds.BarMenuBeverageInstance.BusinessUserBeverageXRef.BeverageId);
 
                     client.Cypher
                         .Match("(d:day {day:'" + key.ToLower() + "'})")
@@ -206,12 +200,15 @@ namespace _1aMigrator
                         .ExecuteWithoutResults();
                     client.Cypher
                         .Create("(n:drink {drink})")
-                        .WithParam("drink", new { name = beverageName })
+                        .WithParam("drink", new { 
+                            name = beverage.Name,
+                            imageUrl = S3Put(beverage.ImageUrl, beverage.Name)
+                        })
                         .ExecuteWithoutResults();
 
                     client.Cypher
                         .Match(string.Concat("(p:business{name:\"", businessName.Replace("'", "\'"), "\"})"))
-                        .Match(string.Concat("(f:drink {name:\"", beverageName, "\"})"))
+                        .Match(string.Concat("(f:drink {name:\"", beverage.Name, "\"})"))
                         .Merge(string.Concat("(p)-[r:DRINK_SPECIAL {price:\"", ds.Price, "\", start:\"", ds.StartTime, "\", end:\"", ds.EndTime, "\", dayOfWeek:\"", ds.DayOfWeek.ToLower(), "\"}]->(f)"))
                         .ExecuteWithoutResults();
                 }
